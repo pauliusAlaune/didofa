@@ -1,0 +1,11 @@
+@mixin responsive($pixels){
+	@media screen and (max-width:$pixels){
+		@content;
+	}
+}
+
+@mixin mfresponsive($pixels){
+	@media screen and (min-width:$pixels){
+		@content;
+	}
+}
