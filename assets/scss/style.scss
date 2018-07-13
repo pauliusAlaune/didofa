@@ -11,6 +11,7 @@ body {
     width: 100%;
     position: fixed;
     height: 90px;
+    top: 0;
     &__holder {
         padding: 24px 30px 29px;
         display: flex;
@@ -218,9 +219,170 @@ body {
         height: 100vh;
         transform: translateY(-100%);
         transition: ease 1s;
-        background-color: #4c69d7;
+        .navDecoHolder {
+            .deco1 {
+                width: 50px;
+                height: 51px;
+                background-color: rgba(249, 230, 239, 0.7);
+                position: absolute;
+                left: 8.4635%;
+                top: 35.2864%;
+            }
+            .deco2 {
+                background-color: $titanWhite;
+                width: 19px;
+                height: 19px;
+                position: absolute;
+                left: 20.3125%;
+                bottom: 46.6145%;
+            }
+            .deco3 {
+                width: 22px;
+                height: 22px;
+                background-color: rgba(249, 230, 239, 0.7);
+                position: absolute;
+                right: 13.2812%;
+                bottom: 26.3020%;
+            }
+        }
+        .navHolder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 189px 14.843% 50px;
+            .navList {
+                &--item {
+                    font-family: $mainFont;
+                    font-size: 32px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 0.94;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: $gray;
+                    padding:  10px 0;
+                    margin-bottom: 34px;
+                    &:first-child {
+                        padding-top: 0;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .linkBlock {
+                width: 100%;
+                display: flex;
+                margin-top: auto;
+                &--itemHolder {
+                    width: 50%;
+                    &:nth-child(odd)
+                    {
+                        padding-right: 15px;
+                    }
+                    &:nth-child(even)
+                    {
+                        padding-left: 15px;
+                    }
+                    .link {
+                        height: 60px;
+                        border: solid 1px $cerise;
+                        font-family: $mainFont;
+                        font-size: 18px;
+                        font-weight: 600;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.67;
+                        letter-spacing: normal;
+                        color: $cerise;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        span {
+                            margin-left: 14px;
+                        }
+                    }
+                }
+            }
+        }
     }
     .navWrapper.active {
         transform: translateY(0%);
+    }
+}
+
+// FOOTER 
+.footer {
+    margin-top: 200px;
+    
+    &__holder {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 80px 9.305555% 91px;
+        border-top: 1px solid $whisper;
+        &__infoBlock {
+            .nameLogo {
+                position: relative;
+                &::before {
+                    content: '';
+                    width: 40px;
+                    height: 40px;
+                    background-color: $remy;
+                    position: absolute;
+                    left: -18%;
+                    top: 1%;
+                }
+                img {
+                    position: relative;
+                    width: 120px;
+                    height: 29px;
+                }
+            }
+        }
+        &__navigationBlock {
+            .name {
+                font-family: $mainFont;
+                font-size: 18px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2.22;
+                letter-spacing: normal;
+                color: $dark;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background-color: $titanWhite;
+                    position: absolute;
+                    left: -13%;
+                    top: 10%;
+                    z-index: -1;
+                }
+            }
+            .listBlock {
+                &--item {
+                    font-family: $mainFont;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: $cerise;
+                }
+            }
+            
+        }
+        &__connectBlock {
+            
+        }
     }
 }
