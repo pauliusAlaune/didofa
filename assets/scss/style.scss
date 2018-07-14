@@ -752,10 +752,11 @@ body {
     &__benefitsHolder {
         width: 100%;
         display: flex;
-        padding: 120px 9.305555%;
-        border-bottom: 1px solid $whisper;
+        padding: 120px 9.305555% 90px;
+//        border-bottom: 1px solid $whisper;
         &__leftBlock {
-            width: 40%;
+            width: 44%;
+            padding-right: 14.513%;
             .title {
                 font-family: $decoFont;
                 font-size: 42px;
@@ -793,25 +794,31 @@ body {
             }
         }
         &__rightBlock {
-            width: 60%;
+            width: 56%;
             .benefitsTokenHolder {
                 width: 100%;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 &__block {
-                    width: 40%;
+                    width: 50%;
                     display: flex;
-                    .iconBlock {
-                        width: 60px;
-                        height: 60px;
-                        background-color: #f3f4ff;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 20px;
+                    margin-bottom: 30px;
+                    padding-right: 5%;
+                    .iconHolder {
+                        &__block {
+                            width: 60px;
+                            height: 60px;
+                            background-color: #f3f4ff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-right: 20px;
+                        }
                     }
                     .textBlock {
+                        display: flex;
+                        align-items: center;
                         .title {
                             font-family: $mainFont;
                             font-size: 18px;
@@ -827,6 +834,198 @@ body {
             }
         }
     }
+    &__tokenAlocationHolder {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 120px 9.305555%;
+        border-bottom: 1px solid $whisper;
+        position: relative;
+        .decoBg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 45%;
+            background-color: $titanWhite;
+        }
+        .titleBlock {
+            width: auto;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            padding-bottom: 70px;
+            .title {
+                font-family: $decoFont;
+                font-size: 42px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.14;
+                letter-spacing: normal;
+                color: $dark;
+                margin-bottom: 20px;
+                margin-top: 30px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 82px;
+                    height: 84px;
+                    background-color: #fff;
+                    position: absolute;
+                    left: -9%;
+                    top: -50%;
+                    z-index: -1;
+                }
+            }
+        }
+        .percentagesHolder {
+            width: 100%;
+            display: flex;
+            position: relative;
+            z-index: 10;
+            padding-bottom: 120px;
+            &__block {
+                width: 50%;
+                &:nth-child(odd)
+                {
+                    padding-right: 15px;
+                }
+                &:nth-child(even)
+                {
+                    padding-left: 15px;
+                }
+                &__inner {
+                    width: 100%;
+                    padding: 38px 30px 48px 40px;
+                    border-radius: 2px;
+                    background-color: #ffffff;
+                    box-shadow: 0 1px 3px 0 rgba(159, 163, 198, 0.3);
+                    .title {
+                        font-family: $mainFont;
+                        font-size: 22px;
+                        font-weight: 600;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.82;
+                        letter-spacing: normal;
+                        color: $dark;
+                        margin-bottom: 24px;
+                    }
+                    .propertyHolder {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 25px;
+                        &__textBlock {
+                            display: flex;
+                            justify-content: space-between;
+                            width: 100%;
+                            margin-bottom: 10px;
+                            .name {
+                                font-family: $mainFont;
+                                font-size: 16px;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1.63;
+                                letter-spacing: normal;
+                                color: $gray;
+                            }
+                            .percentages {
+                                font-family: $mainFont;
+                                font-size: 16px;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1.63;
+                                letter-spacing: normal;
+                                text-align: right;
+                            }
+                        }
+                        &__percentagesBlock {
+                            width: 100%;
+                            height: 15px;
+                            background-color: #f3f3f8;
+                            position: relative;
+                            .percentagesLine {
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .downloadHolder {
+            width: 100%;
+            display: flex;
+            &__block {
+                width: 50%;
+                &:nth-child(odd){
+                    padding-right: 70px;
+                }
+                &:nth-child(even){
+                    padding-left: 70px;
+                }
+                &__inner {
+                    width: 100%;
+                    display: flex;
+                    .imgBlock {
+                        width: 40%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    .textBlock {
+                        width: 60%;
+                        padding-left: 10%;
+                        .title {
+                            font-family: $mainFont;
+                            font-size: 20px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 2;
+                            letter-spacing: normal;
+                            color: $dark;
+                            margin-bottom: 7px;
+                        }
+                        .para {
+                            font-family: $mainFont;
+                            font-size: 16px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.63;
+                            letter-spacing: normal;
+                            color: $gray;
+                            margin-bottom: 15px;
+                        }
+                        .downloadLink {
+                            display: flex;
+                            align-items: center;
+                            font-family: $mainFont;
+                            font-size: 16px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.88;
+                            letter-spacing: normal;
+                            color: $cerise;
+                            span {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
 }
 
 // FOOTER 
@@ -1080,4 +1279,17 @@ body {
             }
         }
     }
+}
+
+.cerise {
+    color: $cerise;
+}
+.royalBlue {
+    color: $royalBlue;
+}
+.ceriseBg {
+    background-color: $cerise;
+}
+.royalBlueBg {
+    background-color: $royalBlue;
 }
