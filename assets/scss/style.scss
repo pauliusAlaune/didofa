@@ -838,8 +838,8 @@ body {
         width: 100%;
         display: flex;
         flex-direction: column;
-        padding: 120px 9.305555%;
-        border-bottom: 1px solid $whisper;
+        padding: 120px 9.305555% 0;
+//        border-bottom: 1px solid $whisper;
         position: relative;
         .decoBg {
             position: absolute;
@@ -1025,7 +1025,152 @@ body {
             }
         }
     } 
+}
 
+// ROADMAP SECTION
+.roadmapSection {
+    width: 100%;
+    background-image: $bgColor;
+    padding-top: 99px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid $whisper;
+    &__meetHolder {
+        width: 100%;
+        padding: 0 9.305555% 120px;
+        border-bottom: 1px solid $whisper;
+        display: flex;
+        justify-content: space-between;
+        &__block {
+            width: 50%;
+            .imgBlock {
+                width: 80%;
+                img {
+                    width: 100%;
+                }
+            }
+            .infoBlock {
+                width: 100%;
+                .title {
+                    font-family: $decoFont;
+                    font-size: 40px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: normal;
+                    color: $dark;
+                    margin-bottom: 20px;
+                    margin-top: 30px;
+                    position: relative;
+                    z-index: 1;
+                    &::before {
+                        content: '';
+                        width: 82px;
+                        height: 84px;
+                        background-color: rgba(249, 230, 239, 0.7);
+                        position: absolute;
+                        left: -9%;
+                        top: -50%;
+                        z-index: -1;
+                    }
+                }
+                .para {
+                    font-family: $mainFont;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.63;
+                    letter-spacing: normal;
+                    color: $gray;
+                    margin-bottom: 30px;
+                }
+                .communityHolder {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &__block {
+                        width: 50%;
+                        display: flex;
+                        margin-bottom: 27px;
+                        .iconBlock {
+                            width: 60px;
+                            height: 60px;
+                            background-color: #f3f4ff;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .textBlock {
+                            margin-left: 15px;
+                            .numPara {
+                                font-family: $mainFont;
+                                font-size: 22px;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1.82;
+                                letter-spacing: normal;
+                                color: $dark;
+                            }
+                            .infoPara {
+                                font-family: $mainFont;
+                                font-size: 14px;
+                                font-weight: 600;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1;
+                                letter-spacing: normal;
+                                color: $gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &__didofaRoadmaoHolder {
+        width: 100%;
+//        padding: 130px 9.305555% 0px;        
+        padding: 130px 0 0px;
+        &__titleBlock {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 70px;
+            .title {
+                font-family: $decoFont;
+                font-size: 40px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1;
+                letter-spacing: normal;
+                color: $dark;
+                margin-bottom: 20px;
+                margin-top: 30px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 82px;
+                    height: 84px;
+                    background-color: $titanWhite;
+                    position: absolute;
+                    left: -9%;
+                    top: -50%;
+                    z-index: -1;
+                }
+            }
+        }
+        &__mapBlock {
+            width: 100%;
+            padding: 0 12.7083% 70px;
+            .roadMapImg {
+                margin: 0 43px;
+            }
+        } 
+    }
 }
 
 // FOOTER 
