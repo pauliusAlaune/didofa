@@ -319,11 +319,10 @@ body {
 // INTRO SECTION
 .introSection {
     width: 100%;
-    height: 100vh;
-    padding: 197px 9.305555% 0;
     background-image: $bgColor;
     &__holder {
         width: 100%;
+        padding: 197px 9.305555% 127px;
         display: flex;
         &__leftBlock {
             width: 40%;
@@ -442,8 +441,218 @@ body {
             }
         }
     }
+    &__parthnerHolder {
+        width: 100%;
+        padding: 49px 9.305555%;
+        border-bottom: 1px solid $whisper;
+        border-top: 1px solid $whisper;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        &--item {
+             width: 15%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    &__historyHolder {
+        width: 100%;
+        padding: 120px 9.305555% 127px;
+        display: flex;
+        &__leftBlock {
+            width: 50%;
+            padding-right: 7%;
+            .videoBlock {
+                position: relative;
+                .coverImg {
+                    width: 100%;
+                    position: relative;
+                    z-index: 10;
+                    opacity: 1;
+                }
+                .vHolder {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    z-index: 1;
+                    opacity: 0;
+                }
+                .playBtn {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                    width: 85px;
+                    height: 85px;
+                    background-color: #ffffff;
+                    box-shadow: 0 10px 20px 0 rgba(80, 86, 133, 0.21);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 20;
+                    cursor: pointer;
+                    .playIcon {
+                        width: 18px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+        &__rightBlock {
+            width: 50%;
+            padding-left: 10%;
+            .title {
+                font-family: $decoFont;
+                font-size: 40px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1;
+                letter-spacing: normal;
+                color: $dark;
+                margin-bottom: 20px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 82px;
+                    height: 84px;
+                    background-color: rgba(249, 230, 239, 0.7);
+                    position: absolute;
+                    left: -9%;
+                    top: -50%;
+                    z-index: -1;
+                }
+            }
+            .para {
+                font-family: $mainFont;
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.63;
+                letter-spacing: normal;
+                color: $gray;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &__infoHolder {
+        width: 100%;
+        padding: 0px 9.305555% 120px;
+        border-bottom: 1px solid $whisper;
+        display: flex;
+        justify-content: space-between;
+        &__block {
+            display: flex;
+            .iconBlock {
+                width: 60px;
+                height: 60px;
+                background-color: #f3f4ff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .textBlock {
+                margin-left: 15px;
+                .numPara {
+                    font-family: $mainFont;
+                    font-size: 22px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.82;
+                    letter-spacing: normal;
+                    color: $dark;
+                }
+                .infoPara {
+                    font-family: $mainFont;
+                    font-size: 14px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: normal;
+                    color: $gray;
+                }
+            }
+        }
+    }
 }
 
+// firstFashionSection
+.firstFashionSection {
+    width: 100%;
+    background-image: $bgColor;
+    padding-top: 83px;
+    padding-bottom: 107px;
+    border-bottom: 1px solid $whisper;
+    &__holder {
+        width: 100%;
+        padding: 43px 9.305555%;
+        display: flex;
+        &__block {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            &:nth-child(odd) {
+                padding-right: 5.25%;
+            }
+            &:nth-child(even) {
+                padding-left: 5.25%;
+            }
+            .title {
+                font-family: $decoFont;
+                font-size: 40px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1;
+                letter-spacing: normal;
+                color: $dark;
+                margin-bottom: 20px;
+                margin-top: 30px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 82px;
+                    height: 84px;
+                    background-color: rgba(249, 230, 239, 0.7);
+                    position: absolute;
+                    left: -9%;
+                    top: -50%;
+                    z-index: -1;
+                }
+            }
+            .para {
+                font-family: $mainFont;
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.63;
+                letter-spacing: normal;
+                color: $gray;
+                margin-bottom: 30px;
+            }
+            .textHolder {
+
+            }
+            .imgHolder {
+                width: 100%;
+                &--item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
 
 // FOOTER 
 .footer {
