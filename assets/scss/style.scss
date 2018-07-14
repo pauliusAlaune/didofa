@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-//    background-color: #4c69d7;
+    background-color: $titanWhite;
 }
 
 // HEADER
@@ -12,6 +12,7 @@ body {
     position: fixed;
     height: 90px;
     top: 0;
+    z-index: 100;
     &__holder {
         padding: 24px 30px 29px;
         display: flex;
@@ -314,10 +315,138 @@ body {
     }
 }
 
+
+// INTRO SECTION
+.introSection {
+    width: 100%;
+    height: 100vh;
+    padding: 197px 9.305555% 0;
+    background-image: $bgColor;
+    &__holder {
+        width: 100%;
+        display: flex;
+        &__leftBlock {
+            width: 40%;
+            height: 100%;
+            padding-top: 53px;
+            padding-bottom: 60px;
+            position: relative;
+            .decoHolder {
+                .deco1 {
+                    width: 42px;
+                    height: 43px;
+                    background-color: $titanWhite;
+                    position: absolute;
+                    right: 8%;
+                    top: 30%;
+                }
+                .deco2 {
+                    width: 18px;
+                    height: 19px;
+                    background-color: $amour;
+                    position: absolute;
+                    position: absolute;
+                    left: -10%;
+                    bottom: 0%;
+                    z-index: 0;
+                }
+            }
+            .title {
+                font-family: $decoFont;
+                font-size: 54px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.19;
+                letter-spacing: normal;
+                color: $dark;
+                margin-bottom: 20px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 82px;
+                    height: 84px;
+                    background-color: rgba(249, 230, 239, 0.7);
+                    position: absolute;
+                    left: -7%;
+                    top: -20%;
+                    z-index: -1;
+                }
+            }
+            .afterTitle {
+                font-family: $mainFont;
+                font-size: 20px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.5;
+                letter-spacing: normal;
+                color: $gray;
+                margin-bottom: 50px;
+            }
+            .subscribeHolder {
+                &__block {
+                    width: 100%;
+                    position: relative;
+                    display: flex;
+                    .subscribeInput {
+                        font-family: $mainFont;
+                        font-size: 16px;
+                        font-weight: 600;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.88;
+                        letter-spacing: normal;
+                        color: $osloGray;
+                        width: 66.2845%;
+                        height: 52px;
+                        border-radius: 2px;
+                        background-color: #ffffff;
+                        border: solid 1px #dedce8;
+                        border-right: none;
+                        padding-left: 48px;
+                        background: url(../images/email-gray.svg) no-repeat 17px;
+                    }
+                    .subscribeBtn {
+                        width: 33.7155%;
+                        height: 52px;
+                        border-radius: 2px;
+                        background-color: $cerise;
+                        font-family: $mainFont;
+                        border: solid 1px $cerise;
+                        font-size: 16px;
+                        font-weight: bold;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        text-align: center;
+                        color: #ffffff;
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        &:hover {
+                            color: $cerise;
+                            background-color: #fff;
+                        }
+                    }
+                    
+                }
+            }
+        }
+        &__rightBlock {
+            width: 60%;
+            padding-left: 4.3055%;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
 // FOOTER 
 .footer {
-    margin-top: 200px;
-    
     &__holder {
         width: 100%;
         height: 100%;
@@ -325,6 +454,7 @@ body {
         justify-content: space-between;
         padding: 80px 9.305555% 91px;
         border-top: 1px solid $whisper;
+        background-image: $bgColor;
         @include responsive(1024px)
         {
             flex-wrap: wrap;
