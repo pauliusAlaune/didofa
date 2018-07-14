@@ -654,6 +654,181 @@ body {
     }
 }
 
+// TOKEN SECTION 
+.tokenSection {
+    width: 100%;
+    background-image: $bgColor;
+    padding-top: 131px;
+    padding-bottom: 126px;
+    border-bottom: 1px solid $whisper;
+    &__modelHolder {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 9.305555% 100px;
+        border-bottom: 1px solid $whisper;
+        &__block {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .textBlock {
+                width: 54.3611%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 0 auto 92px;
+                .title {
+                    font-family: $decoFont;
+                    font-size: 40px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1;
+                    letter-spacing: normal;
+                    color: $dark;
+                    margin-bottom: 20px;
+                    margin-top: 30px;
+                    position: relative;
+                    z-index: 1;
+                    &::before {
+                        content: '';
+                        width: 82px;
+                        height: 84px;
+                        background-color: $titanWhite;
+                        position: absolute;
+                        left: -9%;
+                        top: -50%;
+                        z-index: -1;
+                    }
+                }
+                .para {
+                    font-family: $mainFont;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.63;
+                    letter-spacing: normal;
+                    color: $gray;
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+            }
+            .infoBlock {
+                width: 30%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .imgHolder {
+                    width: auto;
+                    margin-bottom: 28px;
+                }
+                .title {
+                    font-family: $mainFont;
+                    font-size: 20px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.25;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: $dark;
+                    margin-bottom: 20px;
+                }
+                .para {
+                    font-family: $mainFont;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.63;
+                    letter-spacing: normal;
+                    text-align: center;
+                    color: $gray;
+                }
+            }
+        }
+    }
+    &__benefitsHolder {
+        width: 100%;
+        display: flex;
+        padding: 120px 9.305555%;
+        border-bottom: 1px solid $whisper;
+        &__leftBlock {
+            width: 40%;
+            .title {
+                font-family: $decoFont;
+                font-size: 42px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.14;
+                letter-spacing: normal;
+                color: $dark;
+                margin-bottom: 20px;
+                margin-top: 30px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 82px;
+                    height: 84px;
+                    background-color: $amour;
+                    position: absolute;
+                    left: -9%;
+                    top: -50%;
+                    z-index: -1;
+                }
+            }
+            .para {
+                font-family: $mainFont;
+                font-size: 16px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1.63;
+                letter-spacing: normal;
+                color: $gray;
+                margin-bottom: 30px;
+            }
+        }
+        &__rightBlock {
+            width: 60%;
+            .benefitsTokenHolder {
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                &__block {
+                    width: 40%;
+                    display: flex;
+                    .iconBlock {
+                        width: 60px;
+                        height: 60px;
+                        background-color: #f3f4ff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-right: 20px;
+                    }
+                    .textBlock {
+                        .title {
+                            font-family: $mainFont;
+                            font-size: 18px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: normal;
+                            letter-spacing: normal;
+                            color: $dark;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 // FOOTER 
 .footer {
     &__holder {
