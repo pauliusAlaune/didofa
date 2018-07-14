@@ -322,9 +322,26 @@ body {
         width: 100%;
         height: 100%;
         display: flex;
+        justify-content: space-between;
         padding: 80px 9.305555% 91px;
         border-top: 1px solid $whisper;
+        @include responsive(1024px)
+        {
+            flex-wrap: wrap;
+        }
         &__infoBlock {
+            width: 30%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            @include responsive(1024px)
+            {
+                width: 60%;
+            }
+            @include responsive(767px)
+            {
+                width: 100%;
+            }
             .nameLogo {
                 position: relative;
                 &::before {
@@ -340,10 +357,46 @@ body {
                     position: relative;
                     width: 120px;
                     height: 29px;
+                    margin-bottom: 39px;
                 }
             }
+            .para {
+                font-family: $mainFont;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.63;
+                    letter-spacing: normal;
+                    color: $gray;
+                }
+                .copy {
+                    font-family: $mainFont;
+                    font-size: 16px;
+                    font-weight: 600;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 1.63;
+                    letter-spacing: normal;
+                    color: $gray;
+                    margin-top: 49px;
+                }
         }
         &__navigationBlock {
+            width: 30%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            @include responsive(1024px)
+            {
+                width: 40%;
+            }
+            @include responsive(767px)
+            {
+                width: 100%;
+                align-items: flex-start;
+                margin-top: 40px;
+            }
             .name {
                 font-family: $mainFont;
                 font-size: 18px;
@@ -355,6 +408,7 @@ body {
                 color: $dark;
                 position: relative;
                 z-index: 1;
+                margin-bottom: 20px;
                 &::before {
                     content: '';
                     width: 27px;
@@ -365,6 +419,7 @@ body {
                     top: 10%;
                     z-index: -1;
                 }
+
             }
             .listBlock {
                 &--item {
@@ -377,12 +432,138 @@ body {
                     letter-spacing: normal;
                     text-align: left;
                     color: $cerise;
+                    margin-bottom: 9px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        color: $royalBlue;
+                    }
                 }
             }
             
         }
         &__connectBlock {
-            
+            width: 36%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            @include responsive(1024px)
+            {
+                width: 100%;
+                margin-top: 67px;
+            }
+            .name {
+                font-family: $mainFont;
+                font-size: 18px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 2.22;
+                letter-spacing: normal;
+                color: $dark;
+                position: relative;
+                z-index: 1;
+                margin-bottom: 23px;
+                &::before {
+                    content: '';
+                    width: 27px;
+                    height: 27px;
+                    background-color: $titanWhite;
+                    position: absolute;
+                    left: -10%;
+                    top: 10%;
+                    z-index: -1;
+                }
+            }
+            .connectLinkHolder {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 22px;
+                @include responsive(1024px)
+                {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+                @include responsive(767px)
+                {
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                }
+                &__block {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    margin-bottom: 22px;
+                    @include responsive(1024px)
+                    {
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        width: 50%;
+                    }
+                    @include responsive(767px)
+                    {
+                        width: 100%;
+                        margin-bottom: 22px;
+                    }
+                    &--link {
+                        width: 20%;
+                        height: 75px;
+                        border-radius: 2px;
+                        background-color: $titanWhite;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 0 11px;
+                        box-shadow: 0px 0px 0px 0px $royalBlue;
+                        transition: all 0.3s ease;
+                        &:first-child {
+                            margin-left: 0;
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                        @include responsive(1200px)
+                        {
+                            width: 18%;
+                            height: 60px;
+                        }
+                        @include responsive(1024px)
+                        {
+                            width: 20%;
+                            height: 68px;
+                            margin-left: 0;
+                            margin-right: 5%;
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                            &:last-child {
+                                margin-right: 5%;
+                            }
+                        }
+                        @include responsive(767px)
+                        {
+                            width: 20%;
+                            margin-right: 6.333%;
+                            &:last-child {
+                                margin-right: 0%;
+                            }
+                        }
+                        img {
+                            transform: scale(1);
+                            transition: all 0.3s ease;
+                        }
+                        &:hover {
+                            box-shadow: 1px 1px 1px 1px $royalBlue;
+                            img {
+                                transform: scale(1.1);
+                            }
+                        }
+
+                    }
+                }
+
+            }
         }
     }
 }
