@@ -325,12 +325,27 @@ body {
         padding: 197px 9.305555% 127px;
         display: flex;
         align-items: center;
+        @include responsive(1024px)
+        {
+            flex-direction: column;
+            padding: 166px 15.305555% 70px;
+        }        
+        @include responsive(950px)
+        {
+            flex-direction: column;
+            padding: 166px 9.305555% 70px;
+        }
         &__leftBlock {
             width: 40%;
             height: 100%;
             padding-top: 53px;
             padding-bottom: 60px;
             position: relative;
+            @include responsive(1024px)
+            {
+                width: 100%;
+                padding: 0 15% 69px;
+            }
             .decoHolder {
                 .deco1 {
                     width: 42px;
@@ -363,6 +378,10 @@ body {
                 margin-bottom: 20px;
                 position: relative;
                 z-index: 1;
+                @include responsive(1024px)
+                {
+                    text-align: center;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -372,6 +391,10 @@ body {
                     left: -7%;
                     top: -20%;
                     z-index: -1;
+                    @include responsive(1024px)
+                    {
+                        left: 15%;
+                    }
                 }
             }
             .afterTitle {
@@ -384,6 +407,10 @@ body {
                 letter-spacing: normal;
                 color: $gray;
                 margin-bottom: 50px;
+                @include responsive(1024px)
+                {
+                    text-align: center;
+                }
             }
             .subscribeHolder {
                 &__block {
@@ -457,6 +484,10 @@ body {
         &__rightBlock {
             width: 60%;
             padding-left: 4.3055%;
+            @include responsive(1024px)
+            {
+                width: 100%;
+            }
             img {
                 width: 100%;
             }
@@ -470,10 +501,26 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
+        @include responsive(1024px)
+        {
+            flex-wrap: wrap;
+            padding: 49px 15.305555% 0;
+        }
         &--item {
              width: 15%;
+            @include responsive(1024px)
+            {
+                width: 38%;
+                margin-bottom: 50px;
+            }
             img {
                 width: 100%;
+            }
+        }
+        .introSection__parthnerHolder--item.table {
+            @include responsive(1024px)
+            {
+                display: none;
             }
         }
     }
@@ -482,9 +529,20 @@ body {
         padding: 120px 9.305555% 127px;
         display: flex;
         align-items: center;
+        @include responsive(1024px)
+        {
+            padding: 92px 15.305555% 70px;
+            flex-direction: column;
+        }
         &__leftBlock {
             width: 50%;
             padding-right: 7%;
+            @include responsive(1024px)
+            {
+                width: 100%;
+                padding-right: 0;
+                order: 2;
+            }
             .videoBlock {
                 position: relative;
                 .coverImg {
@@ -546,6 +604,12 @@ body {
         &__rightBlock {
             width: 50%;
             padding-left: 10%;
+            @include responsive(1024px)
+            {
+                width: 100%;
+                padding-left: 0;
+                order: 1;
+            }
             .title {
                 font-family: $decoFont;
                 font-size: 40px;
@@ -558,6 +622,10 @@ body {
                 margin-bottom: 20px;
                 position: relative;
                 z-index: 1;
+                @include responsive(1024px)
+                {
+                    text-align: center;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -567,6 +635,11 @@ body {
                     left: -9%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(1024px)
+                    {
+                        left: 17%;
+                        top: -60%;
+                    }
                 }
             }
             .para {
@@ -579,6 +652,10 @@ body {
                 letter-spacing: normal;
                 color: $gray;
                 margin-bottom: 30px;
+                @include responsive(1024px)
+                {
+                    text-align: center;
+                }
             }
         }
     }
@@ -588,8 +665,18 @@ body {
         border-bottom: 1px solid $whisper;
         display: flex;
         justify-content: space-between;
+        @include responsive(1024px)
+        {
+            padding: 0px 40px 70px;
+            flex-wrap: wrap;
+        }
         &__block {
             display: flex;
+            @include responsive(1024px)
+            {
+                width: 50%;
+                margin-bottom: 40px;
+            }
             .iconBlock {
                 width: 60px;
                 height: 60px;
