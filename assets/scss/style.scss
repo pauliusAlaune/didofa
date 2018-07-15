@@ -492,6 +492,13 @@ body {
                     position: relative;
                     z-index: 10;
                     opacity: 1;
+                    transform: translateY(0);
+                    transition: all 0.5s ease;
+                    
+                }
+                .coverImg.active {
+                    opacity: 0;
+                    transform: translateY(-200px);
                 }
                 .vHolder {
                     width: 100%;
@@ -500,6 +507,10 @@ body {
                     top: 0;
                     z-index: 1;
                     opacity: 0;
+                    transition: all 0.5s ease;
+                }
+                .vHolder.active {
+                    opacity: 1;
                 }
                 .playBtn {
                     position: absolute;
@@ -517,11 +528,18 @@ body {
                     align-items: center;
                     justify-content: center;
                     z-index: 20;
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition: all 0.5s ease 0.2s;
                     cursor: pointer;
                     .playIcon {
                         width: 18px;
                         height: 24px;
                     }
+                }
+                .playBtn.active {
+                    opacity: 0;
+                    transform: translateY(-200px);
                 }
             }
         }
@@ -1197,40 +1215,40 @@ body {
                 height: 12px;
                 background-color: #faedf3;
                 position: absolute;
-                right: 5%;
-                top: 13.5%
+                left: 12%;
+                top: 28.5%;
             }
             .deco2 {
                 width: 24px;
                 height: 24px;
                 background-color: #faedf3;
                 position: absolute;
-                left: 44%;
-                top: 38%;
+                right: 10%;
+                top: 32%;
             }
             .deco3 {
                 width: 24px;
                 height: 24px;
                 background-color: #f3f4ff;
                 position: absolute;
-                right: 7%;
-                top: 65%;
+                left: 20%;
+                top: 55%;
             }
             .deco4 {
                 width: 12px;
                 height: 12px;
                 background-color: #f3f4ff;
                 position: absolute;
-                left: 50%;
-                bottom: 11%;
+                right: 5%;
+                top: 62%;
             }
             .deco5 {
                 width: 16px;
                 height: 17px;
                 background-color: #faedf3;
                 position: absolute;
-                left: 50%;
-                bottom: 11%;
+                left: 28%;
+                bottom: 0%;
             }
         }
         &__titleBlock {
@@ -1706,6 +1724,49 @@ body {
     &__newsHolder {
         width: 100%;
         padding: 120px 9.305555%;
+        position: relative;
+        .decoHolder {
+            .deco1 {
+                width: 24px;
+                height: 24px;
+                background-color: #f3f4ff;
+                position: absolute;
+                top: 32.5%;
+                left: 33.4%;
+            }
+            .deco2 {
+                width: 95px;
+                height: 111px;
+                background-color: #feebf3;
+                position: absolute;
+                top: 35%;
+                left: 7%;
+            }
+            .deco3 {
+                width: 24px;
+                height: 24px;
+                background-color: #fbe8f1;
+                position: absolute;
+                top: 45%;
+                right: 5%;
+            }
+            .deco4 {
+                width: 36px;
+                height: 43px;
+                background-color: #f3f4ff;
+                position: absolute;
+                top: 64%;
+                left: 30%;
+            }
+            .deco5 {
+                width: 95px;
+                height: 111px;
+                background-color: #f3f4ff;
+                position: absolute;
+                top: 57%;
+                right: 7%;
+            }
+        }
         &__carouselHolder {
             position: relative;
             .newsTitle {
@@ -1843,6 +1904,33 @@ body {
     background-image: $bgColor;
     padding-top: 140px;
     padding-bottom: 120px;
+    position: relative;
+    .decoHolder {
+        .deco1 {
+            width: 27px;
+            height: 27px;
+            background-color: #f3f4ff;
+            position: absolute;
+            top: 13.5%;
+            right: 8.4%;
+        }
+        .deco2 {
+            width: 40px;
+            height: 40px;
+            background-color: #feebf3;
+            position: absolute;
+            top: 37%;
+            left: 3%;
+        }
+        .deco3 {
+            width: 22px;
+            height: 22px;
+            background-color: #feebf3;
+            position: absolute;
+            top: 67%;
+            right: 2%;
+        }
+    }
     &__titleHolder {
         display: flex;
         justify-content: center;
@@ -1875,6 +1963,7 @@ body {
         width: 100%;
         padding: 114px 9.305555% 0;
         display: flex;
+        position: relative;
         &__block {
             width: 50%;
             &:nth-child(odd){
@@ -2228,4 +2317,7 @@ body {
           10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
           20%, 40%, 60%, 80% {transform: translateX(10px);}
     }
+}
+.hide {
+    display: none;
 }

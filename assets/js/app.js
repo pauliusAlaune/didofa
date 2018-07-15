@@ -62,6 +62,20 @@ $(document).ready(function() {
     }
     
     
+    //  PLAY VIDEO
+    $('#playBtn').on('click', function () {
+        $('.coverImg').addClass('active');
+        $('#playBtn').addClass('active');
+        $('.vHolder').addClass('active');
+//        setTimeout(function(){
+//            $("#video")[0].src += "?autoplay=1";
+//            $('.coverImg').addClass('hide');
+//            $('#playBtn').addClass('hide');
+//        }, 700);
+        $("#video")[0].src += "&autoplay=1";
+    });
+    
+    
     // GET PERCENTAGES VALUE AND ADD STYLE IN DECO LINE
     addPercentages();
     
