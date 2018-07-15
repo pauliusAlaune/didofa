@@ -1168,8 +1168,227 @@ body {
             padding: 0 12.7083% 70px;
             .roadMapImg {
                 margin: 0 43px;
+                width: 100%;
             }
-        } 
+        }
+        &__carouselHolder {
+            width: 100%;
+            padding: 0 12.7083% 70px;
+            position: relative;
+            &__carouselWrapper {
+                width: 100%;
+                display: flex;
+                &--item {
+
+                    .dateBlock {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: $titanWhite;
+                        margin-left: 51px;
+                        width: 89px;
+                        height: 47px;
+                        margin-bottom: 22px;
+                        transition: all 0.5s ease;
+                        .date {
+                            font-family: $mainFont;
+                            font-size: 16px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.63;
+                            letter-spacing: normal;
+                            color: $royalBlue;
+                            transition: all 0.5s ease;
+                        }
+                    }
+                    .decoLine {
+                        width: 100%;
+                        height: 1px;
+                        background-color: #e7e4f2;
+                        position: relative;
+                        margin-bottom: 35px;
+                        &__circle {
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 50%;
+                            background-color: rgba(244, 44, 125, 0);
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            margin: auto;
+                            left: 51px;
+                            transition: background-color 0.5s ease;
+                            &__innerCircle {
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 50%;
+                                background-color: $royalBlue;
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                margin: auto;
+                                transition: background-color 0.5s ease;
+                            }
+                        }
+                    }
+                    .textBlock {
+                        margin-left: 51px;
+                        .title {
+                            font-family: $mainFont;
+                            font-size: 20px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 2;
+                            letter-spacing: normal;
+                            color: $dark;
+                            margin-bottom: 8px;
+                            transition: color 0.5s ease;
+                        }
+                        .para {
+                            font-family: $mainFont;
+                            font-size: 14px;
+                            font-weight: 600;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.43;
+                            letter-spacing: normal;
+                            color: $gray;
+                        }
+                    }
+                }
+                .roadmapSection__didofaRoadmaoHolder__carouselHolder__carouselWrapper--item.activeCerise {
+                    .dateBlock {
+                        background-color: $amour;
+                        .date {
+                            color: $cerise;
+                        }
+                    }
+                    .decoLine {
+                        &__circle {
+                            background-color: rgba(244, 44, 125, 0.31);
+                            &__innerCircle {
+                                background-color: #d92396;
+                            }
+                        }
+                    }
+                    .textBlock {
+                        .title {
+                            color: $cerise;
+                        }
+                    }
+                }
+            }
+            .customRoadmapCarNav {
+                .nextRoadmap {
+                    width: 50px;
+                    height: 50px;
+                    border: solid 1px #e7e4f2;
+                    position: absolute;
+                    right: 9.2%;
+                    top: 15%;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        border: solid 1px $cerise;
+                        .nextRoadmap--icon {
+                            background-image: url('../images/stre-right-cerise.svg');
+                            transform: rotate(0deg);
+                        }
+                    }
+                    &--icon {
+                        background-image: url('../images/stre-right.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 9px;
+                        height: 18px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        transition: background-image 0.3s ease;
+                    }
+                }
+                .prevRoadmap {
+                    width: 50px;
+                    height: 50px;
+                    border: solid 1px #e7e4f2;
+                    position: absolute;
+                    left: 9.2%;
+                    top: 15%;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover {
+                        border: solid 1px $cerise;
+                        .prevRoadmap--icon {
+                            background-image: url('../images/stre-left-cerise.svg');
+                        }
+                    }
+                    &--icon {
+                        background-image: url('../images/stre-left.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 9px;
+                        height: 18px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        margin: auto;
+                        transition: background-image 0.3s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MEET TEAM SECTION
+.meetTeamSection {
+    width: 100%;
+    background-image: $bgColor;
+    padding-top: 140px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid $whisper;
+    &__holder {
+        width: 100%;
+//        padding: 130px 9.305555% 0px;        
+        &__titleBlock {
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            margin-bottom: 70px;
+            .title {
+                font-family: $decoFont;
+                font-size: 40px;
+                font-weight: 600;
+                font-style: normal;
+                font-stretch: normal;
+                line-height: 1;
+                letter-spacing: normal;
+                color: $dark;
+                margin-bottom: 20px;
+                margin-top: 30px;
+                position: relative;
+                z-index: 1;
+                &::before {
+                    content: '';
+                    width: 82px;
+                    height: 84px;
+                    background-color: $titanWhite;
+                    position: absolute;
+                    left: -9%;
+                    top: -50%;
+                    z-index: -1;
+                }
+            }
+        }
     }
 }
 

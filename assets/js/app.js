@@ -8,6 +8,8 @@ $(document).ready(function() {
         }
     });
     
+    
+    // GET PERCENTAGES VALUE AND ADD STYLE IN DECO LINE
     addPercentages();
     
     function addPercentages() {
@@ -18,5 +20,47 @@ $(document).ready(function() {
             percentagesLine[i].style.width = thisText;
         }
     }
+    
+    // ROADMAP CAROUSEL
+    $('#roadmapCar').owlCarousel({
+        loop:true,
+        margin:0,
+        nav:true,
+        onChanged: activeCerise,
+        onDragged: activeCerise,
+        responsive:{
+            0:{
+                items:1
+            },
+            767:{
+                items:2
+            },
+            1024:{
+                items:4
+            }
+        }
+    });
+    
+    $('#roadmapCar .owl-item').children().removeClass('activeCerise');
+    $('#roadmapCar .owl-item.active').first().children().addClass('activeCerise');
+    
+    $('#nextRoadmap').click(function(){
+        $('#roadmapCar .owl-next').trigger('click');
+        $('#roadmapCar .owl-item').children().removeClass('activeCerise');
+        $('#roadmapCar .owl-item.active').first().children().addClass('activeCerise');
+    }); 
+    
+    $('#prevRoadmap').click(function(){
+        $('#roadmapCar .owl-prev').trigger('click');
+        $('#roadmapCar .owl-item').children().removeClass('activeCerise');
+        $('#roadmapCar .owl-item.active').first().children().addClass('activeCerise');
+    });
+    
+    function activeCerise(){
+        $('.roadmapSection__didofaRoadmaoHolder__carouselHolder__carouselWrapper--item item').removeClass('activeCerise');
+        $('#roadmapCar .owl-item.active').first().children().addClass('activeCerise');
+        console.log('work');
+    }
+    
 });
 
