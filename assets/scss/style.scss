@@ -1766,7 +1766,7 @@ body {
                 height: 84px;
                 background-color: $titanWhite;
                 position: absolute;
-                left: -3%;
+                left: -9%;
                 top: -50%;
                 z-index: -1;
             }
@@ -1774,7 +1774,72 @@ body {
     }
     &__holder {
         width: 100%;
-        padding: 0 9.305555%;
+        padding: 114px 9.305555% 0;
+        display: flex;
+        &__block {
+            width: 50%;
+            &:nth-child(odd){
+                padding-right: 15px;
+            }
+            &:nth-child(even){
+                padding-left: 15px;
+            }
+            .questionAndAnswerHolder {
+                width: 100%;
+                border-radius: 2px;
+                border: solid 1px #ebe9f3;
+                margin-bottom: 31px;
+                .questionBlock {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 12px 30px 10px;
+                    cursor: pointer;
+                    .title {
+                        font-family: $mainFont;
+                        font-size: 18px;
+                        font-weight: 600;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 2.22;
+                        letter-spacing: normal;
+                        color: $dark;
+                        transition: all 0.3s ease;
+                    }
+                    .icon {
+                        background-image: url('../images/plus.svg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        width: 16px;
+                        height: 16px;
+                        transition: all 0.3s ease;
+                    }
+                }
+                .questionBlock.active {
+                    .title {
+                        color: $cerise;
+                    }
+                    .icon {
+                        background-image: url('../images/minus.svg');
+                    }
+                }
+                .answerBlock {
+                    display: none;
+                    padding: 5px 30px 27px;
+                    .para {
+                        font-family: $mainFont;
+                        font-size: 16px;
+                        font-weight: 600;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.63;
+                        letter-spacing: normal;
+                        color: $gray;
+                    }
+                }
+            }
+        }
     }
 }
 

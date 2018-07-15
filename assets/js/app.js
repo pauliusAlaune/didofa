@@ -90,5 +90,23 @@ $(document).ready(function() {
     });
     
     
+    // QUESTION AND ANSWER SLIDE DOWN / UP
+    $('.questionBlock').click(function(e){
+        e.stopPropagation();
+        if($(this).hasClass('active')){
+            $('.questionBlock').next().removeClass('open');
+            $('.questionBlock').next().slideUp('slow');
+            $('.questionBlock').removeClass('active');
+        }else{
+            $('.questionBlock').next().removeClass('open');
+            $('.questionBlock').next().slideUp('slow');
+            $('.questionBlock').removeClass('active');
+            $(this).next().slideToggle("slow");
+            $(this).next().toggleClass('open');
+            $(this).toggleClass('active');
+        }
+    });
+
+    
 });
 
