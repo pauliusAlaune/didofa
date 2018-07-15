@@ -62,5 +62,33 @@ $(document).ready(function() {
         console.log('work');
     }
     
+    // NEWS CAROUSEL
+    $('#newsCarousel').owlCarousel({
+        loop:true,
+        margin:0,
+        nav:true,
+        margin: 30,
+        responsive:{
+            0:{
+                items:1
+            },
+            767:{
+                items:2
+            },
+            1024:{
+                items:3
+            }
+        }
+    });
+    
+    $('#nextNews').click(function(){
+        $('#newsCarousel .owl-next').trigger('click');
+    }); 
+    
+    $('#prevNews').click(function(){
+        $('#newsCarousel .owl-prev').trigger('click');
+    });
+    
+    
 });
 
