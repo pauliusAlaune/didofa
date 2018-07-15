@@ -390,6 +390,7 @@ body {
                     width: 100%;
                     position: relative;
                     display: flex;
+                    padding-bottom: 25px;
                     .subscribeInput {
                         font-family: $mainFont;
                         font-size: 16px;
@@ -430,7 +431,26 @@ body {
                             background-color: #fff;
                         }
                     }
-                    
+                    .invalid-feedback {
+                        font-family: $mainFont;
+                        font-size: 12px;
+                        font-weight: 600;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.4;
+                        letter-spacing: normal;
+                        color: $cerise;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        opacity: 0;
+                        transition: all 0.5s ease;
+                    }
+                }
+                .subscribeHolder__block.err {
+                    .invalid-feedback {
+                        opacity: 1;
+                    }
                 }
             }
         }
@@ -461,6 +481,7 @@ body {
         width: 100%;
         padding: 120px 9.305555% 127px;
         display: flex;
+        align-items: center;
         &__leftBlock {
             width: 50%;
             padding-right: 7%;
@@ -593,6 +614,41 @@ body {
     padding-top: 83px;
     padding-bottom: 107px;
     border-bottom: 1px solid $whisper;
+    position: relative;
+    .decoHolder {
+        .deco1 {
+            width: 29px;
+            height: 30px;
+            background-color: #f3f4ff;
+            position: absolute;
+            right: 5%;
+            top: 13.5%
+        }
+        .deco2 {
+            width: 24px;
+            height: 25px;
+            background-color: #faedf3;
+            position: absolute;
+            left: 44%;
+            top: 38%;
+        }
+        .deco3 {
+            width: 17px;
+            height: 18px;
+            background-color: #faedf3;
+            position: absolute;
+            right: 7%;
+            top: 65%;
+        }
+        .deco4 {
+            width: 29px;
+            height: 30px;
+            background-color: #f3f4ff;
+            position: absolute;
+            left: 50%;
+            bottom: 11%;
+        }
+    }
     &__holder {
         width: 100%;
         padding: 43px 9.305555%;
@@ -1134,6 +1190,49 @@ body {
         width: 100%;
 //        padding: 130px 9.305555% 0px;        
         padding: 130px 0 0px;
+        position: relative;
+        .decoHolder {
+            .deco1 {
+                width: 12px;
+                height: 12px;
+                background-color: #faedf3;
+                position: absolute;
+                right: 5%;
+                top: 13.5%
+            }
+            .deco2 {
+                width: 24px;
+                height: 24px;
+                background-color: #faedf3;
+                position: absolute;
+                left: 44%;
+                top: 38%;
+            }
+            .deco3 {
+                width: 24px;
+                height: 24px;
+                background-color: #f3f4ff;
+                position: absolute;
+                right: 7%;
+                top: 65%;
+            }
+            .deco4 {
+                width: 12px;
+                height: 12px;
+                background-color: #f3f4ff;
+                position: absolute;
+                left: 50%;
+                bottom: 11%;
+            }
+            .deco5 {
+                width: 16px;
+                height: 17px;
+                background-color: #faedf3;
+                position: absolute;
+                left: 50%;
+                bottom: 11%;
+            }
+        }
         &__titleBlock {
             display: flex;
             justify-content: center;
@@ -2107,4 +2206,26 @@ body {
 }
 .royalBlueBg {
     background-color: $royalBlue;
+}
+.animated {
+  	-webkit-animation-fill-mode: both;
+	  -moz-animation-fill-mode: both;
+	  -ms-animation-fill-mode: both;
+	  -o-animation-fill-mode: both;
+	  animation-fill-mode: both;
+  	-webkit-animation-duration: 1s;
+  	-moz-animation-duration: 1s;
+  	-ms-animation-duration: 1s;
+	  -o-animation-duration: 1s;
+}
+.shake {
+    -webkit-animation-name: shake;
+    -moz-animation-name: shake;
+  	-o-animation-name: shake;
+    animation-name: shake;
+    @keyframes shake {
+          0%, 100% {transform: translateX(0);}
+          10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+          20%, 40%, 60%, 80% {transform: translateX(10px);}
+    }
 }

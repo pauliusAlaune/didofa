@@ -1,4 +1,6 @@
 $(document).ready(function() { 
+    
+    // TABLE AND MOBILE NAVIGATION OPEN AND CLOSE
     $("#menuToggle").click(function(){
         $("#nav-icon").toggleClass("open");
         if($("#nav-icon").hasClass("open")) {
@@ -7,6 +9,57 @@ $(document).ready(function() {
             $(".navWrapper").delay(300).removeClass('active');
         }
     });
+    
+    
+    // SCROLL BY HREF TO ID PLACE
+    $('.scrollLink[href^="#"]').on('click', function(e) {
+        var id = $(this).attr('href');
+        var $id = $(id);
+        if ($id.length === 0) {
+            return;
+        }
+        e.preventDefault();
+        var pos = $id.offset().top;
+        $('body, html').animate({scrollTop: pos});
+    });
+    
+    
+    // SUBSCRIBE FORM VALIDATION
+    const subscribeForm = document.getElementById('subscribeForm');
+    if (subscribeForm) {
+        subscribeForm.addEventListener('submit', function(e){        
+            if(!(validateEmail())){
+                e.preventDefault();
+            } else {
+                console.log('fin');
+            }        
+        });
+    }
+
+    document.getElementById('email').addEventListener('blur', validateEmail);
+
+    function validateEmail(){
+        const email = document.getElementById('email');
+        const block = document.querySelector('.subscribeHolder__block');
+        let validEmail = true;
+        const re = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+).([a-zA-Z]{2,5})$/;
+        if(!re.test(email.value)){
+            email.classList.add('is-invalid'); 
+            block.classList.add('err');
+            block.classList.add('animated', 'shake');
+            setTimeout(function(){
+                block.classList.remove('animated', 'shake');
+            }, 1500);
+            setTimeout(function(){
+                block.classList.remove('err');
+            }, 3000);
+            validEmail = false;
+        } else {
+            email.classList.remove('is-invalid');
+            block.classList.remove('err');
+        }
+        return validEmail;
+    }
     
     
     // GET PERCENTAGES VALUE AND ADD STYLE IN DECO LINE
@@ -20,6 +73,7 @@ $(document).ready(function() {
             percentagesLine[i].style.width = thisText;
         }
     }
+    
     
     // ROADMAP CAROUSEL
     $('#roadmapCar').owlCarousel({
@@ -61,6 +115,7 @@ $(document).ready(function() {
         $('#roadmapCar .owl-item.active').first().children().addClass('activeCerise');
         console.log('work');
     }
+    
     
     // NEWS CAROUSEL
     $('#newsCarousel').owlCarousel({

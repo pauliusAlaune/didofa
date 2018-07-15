@@ -20,12 +20,12 @@
                 </div>
                 <div class="navigationBlock">
                     <ul class="navigationList">
-                        <li class="navigationList--item">About</li>
-                        <li class="navigationList--item">Token</li>
-                        <li class="navigationList--item">Media</li>
-                        <li class="navigationList--item">Roadmap</li>
-                        <li class="navigationList--item">Team</li>
-                        <li class="navigationList--item">FAQ</li>
+                        <li class="navigationList--item"><a href="#about" class="scrollLink">About</a></li>
+                        <li class="navigationList--item"><a href="#token" class="scrollLink">Token</a></li>
+                        <li class="navigationList--item"><a href="#media" class="scrollLink">Media</a></li>
+                        <li class="navigationList--item"><a href="#roadmap" class="scrollLink">Roadmap</a></li>
+                        <li class="navigationList--item"><a href="#team" class="scrollLink">Team</a></li>
+                        <li class="navigationList--item"><a href="#faq" class="scrollLink">FAQ</a></li>
                     </ul>
                 </div>
             </div>
@@ -49,12 +49,12 @@
             </div>
             <div class="navHolder">
                 <ul class="navList">
-                    <li class="navList--item">About</li>
-                    <li class="navList--item">Token</li>
-                    <li class="navList--item">Media</li>
-                    <li class="navList--item">Roadmap</li>
-                    <li class="navList--item">Team</li>
-                    <li class="navList--item">FAQ</li>
+                    <li class="navList--item"><a href="#about" class="scrollLink">About</a></li>
+                    <li class="navList--item"><a href="#token" class="scrollLink">Token</a></li>
+                    <li class="navList--item"><a href="#media" class="scrollLink">Media</a></li>
+                    <li class="navList--item"><a href="#roadmap" class="scrollLink">Roadmap</a></li>
+                    <li class="navList--item"><a href="#team" class="scrollLink">Team</a></li>
+                    <li class="navList--item"><a href="#faq" class="scrollLink">FAQ</a></li>
                 </ul>
                 <div class="linkBlock">
                     <div class="linkBlock--itemHolder">
@@ -84,6 +84,7 @@
                     <div class="subscribeHolder__block">
                         <input type="text" name="email" id="email" class="subscribeInput" placeholder="Enter your email address">
                         <input type="submit" value="Subscribe" id="subscribeBtn" class="subscribeBtn">
+                        <div class="invalid-feedback">Enter a valid email</div>
                     </div>
                 </form>
             </div>
@@ -152,8 +153,14 @@
         </div>
     </section>
 
-   <section class="firstFashionSection">
-       <div class="firstFashionSection__holder">
+    <section id="about" class="firstFashionSection">
+        <div class="decoHolder">
+            <div class="deco1"></div>
+            <div class="deco2"></div>
+            <div class="deco3"></div>
+            <div class="deco4"></div>
+        </div>    
+        <div class="firstFashionSection__holder">
            <div class="firstFashionSection__holder__block">
                 <div class="textHolder">
                    <h4 class="title">First Fashion-Luxury brand</h4>
@@ -195,7 +202,7 @@
         </div>
    </section>
    
-   <section class="tokenSection">
+   <section id="token" class="tokenSection">
        <div class="tokenSection__modelHolder">
            <div class="tokenSection__modelHolder__block">
                 <div class="textBlock">
@@ -425,7 +432,7 @@
                     <h4 class="title">Meet our Community</h4>
                     <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim</p>
                     <div class="communityHolder">
-                        <a href="" class="communityHolder__block">
+                        <div href="" class="communityHolder__block">
                             <div class="iconBlock">
                                 <img src="assets/images/logo-instagram.svg" alt="">
                             </div>
@@ -433,8 +440,8 @@
                                 <p class="numPara">2314</p>
                                 <p class="infoPara">Instagram photos</p>
                             </div>
-                        </a>
-                        <a href="" class="communityHolder__block">
+                        </div>
+                        <div href="" class="communityHolder__block">
                             <div class="iconBlock">
                                 <img src="assets/images/single-02-1.svg" alt="">
                             </div>
@@ -442,8 +449,8 @@
                                 <p class="numPara">+ 100k</p>
                                 <p class="infoPara">Active users over socials</p>
                             </div>
-                        </a>
-                        <a href="" class="communityHolder__block">
+                        </div>
+                        <div href="" class="communityHolder__block">
                             <div class="iconBlock">
                                 <img src="assets/images/share-2.svg" alt="">
                             </div>
@@ -451,8 +458,8 @@
                                 <p class="numPara">441</p>
                                 <p class="infoPara">Social Shares</p>
                             </div>
-                        </a>
-                        <a href="" class="communityHolder__block">
+                        </div>
+                        <div href="" class="communityHolder__block">
                             <div class="iconBlock">
                                 <img src="assets/images/tag-2.svg" alt="">
                             </div>
@@ -460,12 +467,19 @@
                                 <p class="numPara">431</p>
                                 <p class="infoPara">Mentions and tags</p>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="roadmapSection__didofaRoadmaoHolder">
+        <div id="roadmap" class="roadmapSection__didofaRoadmaoHolder">
+            <div class="decoHolder">
+                <div class="deco1"></div>
+                <div class="deco2"></div>
+                <div class="deco3"></div>
+                <div class="deco4"></div>
+                <div class="deco5"></div>
+            </div>  
             <div class="roadmapSection__didofaRoadmaoHolder__titleBlock">
                 <h3 class="title">Didofa Roadmap</h3>
             </div>
@@ -543,7 +557,7 @@
         </div>
     </section>
    
-    <section class="meetTeamSection">
+    <section id="team" class="meetTeamSection">
         <div class="meetTeamSection__teamHolder">
             <div class="meetTeamSection__teamHolder__titleBlock">
                 <h3 class="title">Meet the team</h3>
@@ -771,7 +785,7 @@
         </div>
     </section>
     
-    <section class="askedQuestionsSection">
+    <section id="faq" class="askedQuestionsSection">
         <div class="askedQuestionsSection__titleHolder">
             <h3 class="title">Frequently Asked Questions</h3>
         </div>        
@@ -867,12 +881,12 @@
             <div class="footer__holder__navigationBlock">
                 <p class="name">Navigation</p>
                 <ul class="listBlock">
-                    <li class="listBlock--item">About</li>
-                    <li class="listBlock--item">Token</li>
-                    <li class="listBlock--item">Media</li>
-                    <li class="listBlock--item">Roadmap</li>
-                    <li class="listBlock--item">Team</li>
-                    <li class="listBlock--item">FAQ</li>
+                    <li class="listBlock--item"><a href="#about" class="scrollLink">About</a></li>
+                    <li class="listBlock--item"><a href="#token" class="scrollLink">Token</a></li>
+                    <li class="listBlock--item"><a href="#media" class="scrollLink">Media</a></li>
+                    <li class="listBlock--item"><a href="#roadmap" class="scrollLink">Roadmap</a></li>
+                    <li class="listBlock--item"><a href="#team" class="scrollLink">Team</a></li>
+                    <li class="listBlock--item"><a href="#faq" class="scrollLink">FAQ</a></li>
                 </ul>
             </div>
             <div class="footer__holder__connectBlock">
