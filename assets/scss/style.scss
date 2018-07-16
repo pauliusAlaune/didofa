@@ -625,6 +625,8 @@ body {
                 @include responsive(1024px)
                 {
                     text-align: center;
+                    width: max-content;
+                    margin: 30px auto 20px;
                 }
                 &::before {
                     content: '';
@@ -637,7 +639,6 @@ body {
                     z-index: -1;
                     @include responsive(1024px)
                     {
-                        left: 17%;
                         top: -60%;
                     }
                 }
@@ -720,6 +721,11 @@ body {
     padding-bottom: 107px;
     border-bottom: 1px solid $whisper;
     position: relative;
+    @include responsive(1024px)
+    {
+        padding-top: 93px;
+        padding-bottom: 71px;
+    }
     .decoHolder {
         .deco1 {
             width: 29px;
@@ -758,15 +764,45 @@ body {
         width: 100%;
         padding: 43px 9.305555%;
         display: flex;
+        @include responsive(1024px)
+        {
+            flex-direction: column;
+            padding: 0px 11.305555%;
+        }
+        .imgOrder {
+            @include responsive(1024px)
+            {
+                order: 2;
+            }
+        }
+        .textOrder {
+            @include responsive(1024px)
+            {
+                order: 1;
+            }
+        }
         &__block {
             width: 50%;
             display: flex;
             align-items: center;
+            @include responsive(1024px)
+            {
+                width: 100%;
+                margin-bottom: 50px;
+            }
             &:nth-child(odd) {
                 padding-right: 5.25%;
+                @include responsive(1024px)
+                {
+                    padding-right: 0;
+                }
             }
             &:nth-child(even) {
                 padding-left: 5.25%;
+                @include responsive(1024px)
+                {
+                    padding-left: 0;
+                }
             }
             .title {
                 font-family: $decoFont;
@@ -781,6 +817,12 @@ body {
                 margin-top: 30px;
                 position: relative;
                 z-index: 1;
+                @include responsive(1024px)
+                {
+                    text-align: center;
+                    width: max-content;
+                    margin: 30px auto 20px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -802,6 +844,10 @@ body {
                 letter-spacing: normal;
                 color: $gray;
                 margin-bottom: 30px;
+                @include responsive(1024px)
+                {
+                    text-align: center;
+                }
             }
             .textHolder {
 
@@ -823,22 +869,40 @@ body {
     padding-top: 131px;
     padding-bottom: 126px;
     border-bottom: 1px solid $whisper;
+    @include responsive(1024px)
+    {
+        padding-top: 94px;
+        padding-bottom: 0px;
+    }
     &__modelHolder {
         width: 100%;
         display: flex;
         flex-direction: column;
         padding: 0 9.305555% 100px;
         border-bottom: 1px solid $whisper;
+        @include responsive(1024px)
+        {
+            padding: 0 9.305555% 40px;
+        }
         &__block {
             width: 100%;
             display: flex;
             justify-content: space-between;
+            @include responsive(1024px)
+            {
+                flex-wrap: wrap;
+            }
             .textBlock {
                 width: 54.3611%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 margin: 0 auto 92px;
+                @include responsive(1024px)
+                {
+                    width: 100%;
+                    margin: 0 auto 50px;
+                }
                 .title {
                     font-family: $decoFont;
                     font-size: 40px;
@@ -881,6 +945,12 @@ body {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                @include responsive(1024px)
+                {
+                    width: 100%;
+                    margin-bottom: 50px;
+                    padding: 0 10%;
+                }
                 .imgHolder {
                     width: auto;
                     margin-bottom: 28px;
@@ -915,10 +985,21 @@ body {
         width: 100%;
         display: flex;
         padding: 120px 9.305555% 90px;
-//        border-bottom: 1px solid $whisper;
+        @include responsive(1024px)
+        {
+            padding: 90px 9.305555% 50px;
+            flex-direction: column;
+        }
         &__leftBlock {
             width: 44%;
             padding-right: 14.513%;
+            @include responsive(1024px)
+            {
+                width: 100%;
+                padding-right: 0%;
+                margin-bottom: 70px;
+                padding: 0 3%;
+            }
             .title {
                 font-family: $decoFont;
                 font-size: 42px;
@@ -932,6 +1013,11 @@ body {
                 margin-top: 30px;
                 position: relative;
                 z-index: 1;
+                @include responsive(1024px)
+                {
+                    margin-top: 0px;
+                    width: max-content;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -957,6 +1043,10 @@ body {
         }
         &__rightBlock {
             width: 56%;
+            @include responsive(1024px)
+            {
+                width: 100%;
+            }
             .benefitsTokenHolder {
                 width: 100%;
                 display: flex;
@@ -967,6 +1057,10 @@ body {
                     display: flex;
                     margin-bottom: 30px;
                     padding-right: 5%;
+                    @include responsive(1024px)
+                    {
+                        padding-right: 0;
+                    }
                     .iconHolder {
                         &__block {
                             width: 60px;
@@ -1001,8 +1095,11 @@ body {
         display: flex;
         flex-direction: column;
         padding: 120px 9.305555% 0;
-//        border-bottom: 1px solid $whisper;
         position: relative;
+        @include responsive(1024px)
+        {
+            padding: 92px 5.305555% 0;
+        }
         .decoBg {
             position: absolute;
             left: 0;
@@ -1030,6 +1127,10 @@ body {
                 margin-top: 30px;
                 position: relative;
                 z-index: 1;
+                @include responsive(1024px)
+                {
+                    margin-top: 0px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1048,15 +1149,33 @@ body {
             position: relative;
             z-index: 10;
             padding-bottom: 120px;
+            @include responsive(1024px)
+            {
+                flex-direction: column;
+                padding-bottom: 70px;
+            }
             &__block {
                 width: 50%;
+                @include responsive(1024px)
+                {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
                 &:nth-child(odd)
                 {
                     padding-right: 15px;
+                    @include responsive(1024px)
+                    {
+                         padding-right: 0;
+                    }
                 }
                 &:nth-child(even)
                 {
                     padding-left: 15px;
+                    @include responsive(1024px)
+                    {
+                         padding-left: 0px;
+                    }
                 }
                 &__inner {
                     width: 100%;
@@ -1074,6 +1193,7 @@ body {
                         letter-spacing: normal;
                         color: $dark;
                         margin-bottom: 24px;
+                        
                     }
                     .propertyHolder {
                         width: 100%;
@@ -1125,19 +1245,45 @@ body {
         .downloadHolder {
             width: 100%;
             display: flex;
+            @include responsive(1024px)
+            {
+                flex-direction: column;
+            }
             &__block {
                 width: 50%;
+                @include responsive(1024px)
+                {
+                    width: 100%;
+                    align-items: center;
+                    margin-bottom: 70px;
+                }
                 &:nth-child(odd){
                     padding-right: 70px;
+                    @include responsive(1024px)
+                    {
+                        padding-right: 0px;
+                    }
                 }
                 &:nth-child(even){
                     padding-left: 70px;
+                    @include responsive(1024px)
+                    {
+                        padding-left: 0px;
+                    }
                 }
                 &__inner {
                     width: 100%;
                     display: flex;
+                    @include responsive(1024px)
+                    {
+                        align-items: center;
+                    }
                     .imgBlock {
                         width: 40%;
+                        @include responsive(1024px)
+                        {
+                            width: 30%;
+                        }
                         img {
                             width: 100%;
                         }
@@ -1145,6 +1291,10 @@ body {
                     .textBlock {
                         width: 60%;
                         padding-left: 10%;
+                        @include responsive(1024px)
+                        {
+                            width: 70%;
+                        }
                         .title {
                             font-family: $mainFont;
                             font-size: 20px;
@@ -1196,16 +1346,34 @@ body {
     padding-top: 99px;
     padding-bottom: 100px;
     border-bottom: 1px solid $whisper;
+    @include responsive(1024px)
+    {
+        padding-top: 70px;
+        padding-bottom: 50px;
+    }
     &__meetHolder {
         width: 100%;
         padding: 0 9.305555% 120px;
         border-bottom: 1px solid $whisper;
         display: flex;
         justify-content: space-between;
+        @include responsive(1024px)
+        {
+            flex-direction: column;
+            padding: 0 6.305555% 70px;
+        }
         &__block {
             width: 50%;
+            @include responsive(1024px)
+            {
+                width: 100%;
+            }
             .imgBlock {
                 width: 80%;
+                @include responsive(1024px)
+                {
+                    margin: 0 auto 40px;
+                }
                 img {
                     width: 100%;
                 }
@@ -1225,6 +1393,11 @@ body {
                     margin-top: 30px;
                     position: relative;
                     z-index: 1;
+                    @include responsive(1024px)
+                    {
+                        width: max-content;
+                        margin: 30px 5% 20px;
+                    }
                     &::before {
                         content: '';
                         width: 82px;
@@ -1246,11 +1419,19 @@ body {
                     letter-spacing: normal;
                     color: $gray;
                     margin-bottom: 30px;
+                    @include responsive(1024px)
+                    {
+                        margin: 0 5%;
+                    }
                 }
                 .communityHolder {
                     width: 100%;
                     display: flex;
                     flex-wrap: wrap;
+                    @include responsive(1024px)
+                    {
+                        margin-top: 44px;
+                    }
                     &__block {
                         width: 50%;
                         display: flex;
@@ -1296,7 +1477,15 @@ body {
 //        padding: 130px 9.305555% 0px;        
         padding: 130px 0 0px;
         position: relative;
+        @include responsive(1024px)
+        {
+            padding: 90px 0 0px;
+        }
         .decoHolder {
+            @include responsive(1024px)
+            {
+                display: none;
+            }
             .deco1 {
                 width: 12px;
                 height: 12px;
@@ -1356,6 +1545,10 @@ body {
                 margin-top: 30px;
                 position: relative;
                 z-index: 1;
+                @include responsive(1024px)
+                {
+                    margin-top: 0px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1371,20 +1564,43 @@ body {
         &__mapBlock {
             width: 100%;
             padding: 0 12.7083% 70px;
+            @include responsive(1024px)
+            {
+                padding: 0 2.7083% 70px;
+            }
             .roadMapImg {
                 margin: 0 43px;
                 width: 100%;
+                @include responsive(1024px)
+                {
+                    max-width: 100%;
+                    width: 100%;
+                    margin: 0;
+                }
             }
         }
         &__carouselHolder {
             width: 100%;
             padding: 0 12.7083% 70px;
             position: relative;
+            @include responsive(1024px)
+            {
+                padding: 0 8.7083% 70px;
+            }
             &__carouselWrapper {
                 width: 100%;
                 display: flex;
+                .owl-nav {
+                    display: none;
+                }
+                .owl-dots {
+                    display: none;
+                }
                 &--item {
-
+                    @include responsive(1024px)
+                    {
+                        
+                    }
                     .dateBlock {
                         display: flex;
                         align-items: center;
@@ -1441,6 +1657,10 @@ body {
                     }
                     .textBlock {
                         margin-left: 51px;
+                        @include responsive(1024px)
+                        {
+                            padding-right: 15%;
+                        }
                         .title {
                             font-family: $mainFont;
                             font-size: 20px;
@@ -1499,6 +1719,10 @@ body {
                     cursor: pointer;
                     z-index: 10;
                     transition: all 0.3s ease;
+                    @include responsive(1024px)
+                    {
+                        right: 4.2%;
+                    }
                     &:hover {
                         border: solid 1px $cerise;
                         .nextRoadmap--icon {
@@ -1532,6 +1756,10 @@ body {
                     cursor: pointer;
                     z-index: 10;
                     transition: all 0.3s ease;
+                    @include responsive(1024px)
+                    {
+                        left: 4.2%;
+                    }
                     &:hover {
                         border: solid 1px $cerise;
                         .prevRoadmap--icon {
@@ -1564,10 +1792,18 @@ body {
     background-image: $bgColor;
     padding-top: 140px;
     border-bottom: 1px solid $whisper;
+    @include responsive(1024px)
+    {
+        padding-top: 94px;
+    }
     &__teamHolder {
         width: 100%;
         padding: 0 9.305555% 50px;
         border-bottom: 1px solid $whisper;
+        @include responsive(1024px)
+        {
+            padding: 0 6.305555% 20px;
+        }
         &__titleBlock {
             width: 63%;
             display: flex;
@@ -1576,6 +1812,11 @@ body {
             align-items: center;
             margin: auto;
             margin-bottom: 100px;
+            @include responsive(1024px)
+            {
+                width: 100%;
+                margin-bottom: 70px;
+            }
             .title {
                 font-family: $decoFont;
                 font-size: 40px;
@@ -1590,6 +1831,10 @@ body {
                 position: relative;
                 z-index: 1;
                 margin-bottom: 20px;
+                @include responsive(1024px)
+                {
+                    margin-top: 0px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1624,6 +1869,20 @@ body {
                 &:nth-child(4n) {
                     padding-right: 0;
                 }
+                @include responsive(1024px)
+                {
+                    width: 50%;
+                    padding-right: 0;
+                    margin-bottom: 50px;
+                    &:nth-child(odd)
+                    {
+                        padding-right: 20px;
+                    }
+                    &:nth-child(even)
+                    {
+                        padding-left: 20px;
+                    }
+                }
                 .imgHolder {
                     width: 100%;
                     background-color: $titanWhite;
@@ -1637,6 +1896,10 @@ body {
                 }
                 .textBlock {
                     width: 100%;
+                    @include responsive(1024px)
+                    {
+                        padding: 0 40px;
+                    }
                     .name {
                         font-family: $mainFont;
                         font-size: 20px;
@@ -1701,6 +1964,11 @@ body {
             margin: auto;
             margin-top: 70px;
             margin-bottom: 100px;
+            @include responsive(1024px)
+            {
+                margin-top: 20px;
+                margin-bottom: 64px;
+            }
             .title {
                 font-family: $decoFont;
                 font-size: 40px;
@@ -1738,6 +2006,20 @@ body {
                 &:nth-child(4n) {
                     padding-right: 0;
                 }
+                @include responsive(1024px)
+                {
+                    width: 50%;
+                    padding-right: 0;
+                    margin-bottom: 50px;
+                    &:nth-child(odd)
+                    {
+                        padding-right: 20px;
+                    }
+                    &:nth-child(even)
+                    {
+                        padding-left: 20px;
+                    }
+                }
                 .imgHolder {
                     width: 100%;
                     background-color: $amour;
@@ -1751,6 +2033,10 @@ body {
                 }
                 .textBlock {
                     width: 100%;
+                    @include responsive(1024px)
+                    {
+                        padding: 0 40px;
+                    }
                     .name {
                         font-family: $mainFont;
                         font-size: 20px;
@@ -1812,6 +2098,10 @@ body {
         width: 100%;
         padding: 120px 9.305555%;
         position: relative;
+        @include responsive(1024px)
+        {
+            padding: 70px 6.305555%;
+        }
         .decoHolder {
             .deco1 {
                 width: 24px;
@@ -1820,6 +2110,10 @@ body {
                 position: absolute;
                 top: 32.5%;
                 left: 33.4%;
+                @include responsive(1024px)
+                {
+                    display: none;
+                }
             }
             .deco2 {
                 width: 95px;
@@ -1828,6 +2122,11 @@ body {
                 position: absolute;
                 top: 35%;
                 left: 7%;
+                @include responsive(1024px)
+                {
+                    top: 27%;
+                    left: 15%;
+                }
             }
             .deco3 {
                 width: 24px;
@@ -1836,6 +2135,11 @@ body {
                 position: absolute;
                 top: 45%;
                 right: 5%;
+                @include responsive(1024px)
+                {
+                    top: 55%;
+                    right: 0%;
+                }
             }
             .deco4 {
                 width: 36px;
@@ -1844,6 +2148,10 @@ body {
                 position: absolute;
                 top: 64%;
                 left: 30%;
+                @include responsive(1024px)
+                {
+                    display: none;
+                }
             }
             .deco5 {
                 width: 95px;
@@ -1852,6 +2160,10 @@ body {
                 position: absolute;
                 top: 57%;
                 right: 7%;
+                @include responsive(1024px)
+                {
+                    display: none;
+                }
             }
         }
         &__carouselHolder {
@@ -1869,6 +2181,10 @@ body {
                 margin-top: 30px;
                 position: relative;
                 z-index: 1;
+                @include responsive(1024px)
+                {
+
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1894,6 +2210,11 @@ body {
                     justify-content: center;
                     align-items: center;
                     cursor: pointer;
+                    @include responsive(1024px)
+                    {
+                        width: 51px;
+                        height: 50px;
+                    }
                     &--icon {
                         background-image: url('../images/stre-right-cerise.svg');
                         background-position: center;
@@ -1911,6 +2232,10 @@ body {
                         letter-spacing: normal;
                         color: $cerise;
                         margin-right: 14px;
+                        @include responsive(1024px)
+                        {
+                            display: none;
+                        }
                     }
                 }
                 .prevNews {
@@ -1922,6 +2247,11 @@ body {
                     align-items: center;
                     cursor: pointer;
                     margin-right: 20px;
+                    @include responsive(1024px)
+                    {
+                        width: 51px;
+                        height: 50px;
+                    }
                     &--icon {
                         background-image: url('../images/stre-left.svg');
                         background-position: center;
@@ -1939,6 +2269,10 @@ body {
                         letter-spacing: normal;
                         color: #4c69d7;
                         margin-left: 14px;
+                        @include responsive(1024px)
+                        {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -1946,6 +2280,16 @@ body {
                 margin-top: 100px;
                 display: flex;
                 padding-top: 18px;
+                @include responsive(1024px)
+                {
+                    margin-top: 70px;
+                }
+                .owl-nav {
+                    display: none;
+                }
+                .owl-dots {
+                    display: none;
+                }
                 &--item {
                     .imgHolder {
                         width: 100%;
@@ -1992,7 +2336,16 @@ body {
     padding-top: 140px;
     padding-bottom: 120px;
     position: relative;
+    @include responsive(1024px)
+    {
+        padding-top: 92px;
+        padding-bottom: 70px;
+    }
     .decoHolder {
+        @include responsive(1024px)
+        {
+            display: none;
+        }
         .deco1 {
             width: 27px;
             height: 27px;
@@ -2051,6 +2404,11 @@ body {
         padding: 114px 9.305555% 0;
         display: flex;
         position: relative;
+        @include responsive(1024px)
+        {
+            flex-direction: column;
+            padding: 70px 5.305555% 0;
+        }
         &__block {
             width: 50%;
             &:nth-child(odd){
@@ -2059,11 +2417,25 @@ body {
             &:nth-child(even){
                 padding-left: 15px;
             }
+            @include responsive(1024px)
+            {
+                width: 100%;
+                &:nth-child(odd){
+                    padding-right: 0px;
+                }
+                &:nth-child(even){
+                    padding-left: 0px;
+                }
+            }
             .questionAndAnswerHolder {
                 width: 100%;
                 border-radius: 2px;
                 border: solid 1px #ebe9f3;
                 margin-bottom: 31px;
+                @include responsive(1024px)
+                {
+                    margin-bottom: 20px;
+                }
                 .questionBlock {
                     width: 100%;
                     display: flex;
