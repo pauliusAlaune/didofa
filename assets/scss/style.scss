@@ -4,6 +4,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: $titanWhite;
+    overflow-x: hidden;
 }
 
 // HEADER
@@ -13,6 +14,10 @@ body {
     height: 90px;
     top: 0;
     z-index: 100;
+    @include responsive(767px)
+    {
+        height: 66px;
+    }
     &__holder {
         padding: 24px 30px 29px;
         display: flex;
@@ -26,12 +31,25 @@ body {
             box-shadow: 0px 0px 0px 0px #000;
             border-bottom: 1px solid $whisper;
         }
+        @include responsive(767px)
+        {
+            padding: 15px 20px 14px;
+        }
         &__leftBlock {
             display: flex;
+            @include responsive(767px)
+            {
+                align-items: center;
+            }
             .logoBlock {
                 img {
                     width: 120px;
                     height: 29px;
+                    @include responsive(767px)
+                    {
+                        width: 92px;
+                        height: auto;
+                    }
                 }
             }
             .navigationBlock {
@@ -132,6 +150,11 @@ body {
                 {
                     display: block;
                 }
+                @include responsive(767px)
+                {
+                    width: 16px;
+                    height: 14px;
+                }
                 .nav-icon {
                     display: block;
                     width: 24px;
@@ -149,10 +172,21 @@ body {
                     transition: all .5s ease-in-out;
                     cursor: pointer;
                     z-index: 50;
+                    @include responsive(767px)
+                    {
+                        width: 16px;
+                        height: 14px;
+                        left: 20px;
+                    }
                 }
                 .nav-icon.open {
                     width: 20px;
                     height: 20px;
+                    @include responsive(767px)
+                    {
+                        width: 14px;
+                        height: 14px;
+                    }
                 }
                 .nav-icon span {
                     background-color: $dark;
@@ -160,6 +194,10 @@ body {
                     width: 100%;
                     position: absolute;
                     transition: all 0.4s ease;
+                    @include responsive(767px)
+                    {
+                        height: 2px;
+                    }
                 }
                 .nav-icon span:nth-child(1) {
                     top: 0px;
@@ -174,6 +212,10 @@ body {
                     -moz-transform-origin: right center;
                     -o-transform-origin: right center;
                     transform-origin: right center;
+                    @include responsive(767px)
+                    {
+                        top: 7px;
+                    }
                 }
                 .nav-icon span:nth-child(3) {
                     top: 16px;
@@ -181,6 +223,10 @@ body {
                     -moz-transform-origin: right center;
                     -o-transform-origin: right center;
                     transform-origin: right center;
+                    @include responsive(767px)
+                    {
+                        top: 14px;
+                    }
                 }
                 .nav-icon.open span:nth-child(1) {
                     -webkit-transform: rotate(-45deg);
@@ -191,6 +237,11 @@ body {
                     left: 0px;
                     background: $dark;
                     width: 25px;
+                    @include responsive(767px)
+                    {
+                        top: 0px;
+                        width: 16px;
+                    }
                 }
                 .nav-icon.open span:nth-child(2) {
                     -webkit-transform: rotate(45deg);
@@ -201,6 +252,11 @@ body {
                     left: 0px;
                     background: $dark;
                     width: 25px;
+                    @include responsive(767px)
+                    {
+                        top: 12px;
+                        width: 16px;
+                    }
                 }
                 .nav-icon.open span:nth-child(3) {
                     width: 0%;
@@ -228,6 +284,11 @@ body {
                 position: absolute;
                 left: 8.4635%;
                 top: 35.2864%;
+                @include responsive(767px)
+                {
+                    left: -2.5365%;
+                    top: 15.2864%
+                }
             }
             .deco2 {
                 background-color: $titanWhite;
@@ -252,6 +313,10 @@ body {
             display: flex;
             flex-direction: column;
             padding: 189px 14.843% 50px;
+            @include responsive(767px)
+            {
+                padding: 111px 20px 10px;
+            }
             .navList {
                 &--item {
                     font-family: $mainFont;
@@ -271,12 +336,21 @@ body {
                     &:last-child {
                         margin-bottom: 0;
                     }
+                    @include responsive(767px)
+                    {
+                        font-size: 18px;
+                        margin-bottom: 10px;
+                    }
                 }
             }
             .linkBlock {
                 width: 100%;
                 display: flex;
                 margin-top: auto;
+                @include responsive(767px)
+                {
+                    flex-direction: column;
+                }
                 &--itemHolder {
                     width: 50%;
                     &:nth-child(odd)
@@ -286,6 +360,19 @@ body {
                     &:nth-child(even)
                     {
                         padding-left: 15px;
+                    }
+                    @include responsive(767px)
+                    {
+                        width: 100%;
+                        margin-bottom: 10px;
+                        &:nth-child(odd)
+                        {
+                            padding-right: 0px;
+                        }
+                        &:nth-child(even)
+                        {
+                            padding-left: 0px;
+                        }
                     }
                     .link {
                         height: 60px;
@@ -302,6 +389,11 @@ body {
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        @include responsive(767px)
+                        {
+                            font-size: 14px;
+                            height: 40px;
+                        }
                         span {
                             margin-left: 14px;
                         }
@@ -335,6 +427,10 @@ body {
             flex-direction: column;
             padding: 166px 9.305555% 70px;
         }
+        @include responsive(767px)
+        {
+            padding: 108px 20px 40px;
+        }
         &__leftBlock {
             width: 40%;
             height: 100%;
@@ -346,6 +442,10 @@ body {
                 width: 100%;
                 padding: 0 15% 69px;
             }
+            @include responsive(767px)
+            {
+                padding: 0 0 29px;
+            }
             .decoHolder {
                 .deco1 {
                     width: 42px;
@@ -354,6 +454,12 @@ body {
                     position: absolute;
                     right: 8%;
                     top: 30%;
+                    @include responsive(767px)
+                    {
+                        width: 19px;
+                        height: 19px;
+                        top: -5%;
+                    }
                 }
                 .deco2 {
                     width: 18px;
@@ -364,6 +470,10 @@ body {
                     left: -10%;
                     bottom: 0%;
                     z-index: 0;
+                    @include responsive(767px)
+                    {
+                        display: none;
+                    }
                 }
             }
             .title {
@@ -382,6 +492,11 @@ body {
                 {
                     text-align: center;
                 }
+                @include responsive(767px)
+                {
+                    font-size: 30px;
+                    margin: 0 15px 20px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -394,6 +509,11 @@ body {
                     @include responsive(1024px)
                     {
                         left: 15%;
+                    }
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
                     }
                 }
             }
@@ -410,6 +530,11 @@ body {
                 @include responsive(1024px)
                 {
                     text-align: center;
+                }                
+                @include responsive(767px)
+                {
+                    font-size: 14px;
+                    margin: 0 15px 50px;
                 }
             }
             .subscribeHolder {
@@ -418,6 +543,10 @@ body {
                     position: relative;
                     display: flex;
                     padding-bottom: 25px;
+                    @include responsive(767px)
+                    {
+                        flex-wrap: wrap;
+                    }
                     .subscribeInput {
                         font-family: $mainFont;
                         font-size: 16px;
@@ -435,6 +564,16 @@ body {
                         border-right: none;
                         padding-left: 48px;
                         background: url(../images/email-gray.svg) no-repeat 17px;
+                        @include responsive(767px)
+                        {
+                            width: 100%;
+                            margin-bottom: 10px;
+                            border: solid 1px #dedce8;
+                            height: 40px;
+                            font-size: 14px;
+                            padding-left: 38px;
+                            background: url(../images/email-gray.svg) no-repeat 11px;
+                        }
                     }
                     .subscribeBtn {
                         width: 33.7155%;
@@ -456,6 +595,12 @@ body {
                         &:hover {
                             color: $cerise;
                             background-color: #fff;
+                        }
+                        @include responsive(767px)
+                        {
+                            width: 100%;
+                            height: 40px;
+                            font-size: 14px;
                         }
                     }
                     .invalid-feedback {
@@ -506,12 +651,20 @@ body {
             flex-wrap: wrap;
             padding: 49px 15.305555% 0;
         }
+        @include responsive(767px)
+        {
+            padding: 40px 15.305555% 20px;
+        }
         &--item {
              width: 15%;
             @include responsive(1024px)
             {
                 width: 38%;
                 margin-bottom: 50px;
+            }
+            @include responsive(767px)
+            {
+                margin-bottom: 25px;
             }
             img {
                 width: 100%;
@@ -533,6 +686,10 @@ body {
         {
             padding: 92px 15.305555% 70px;
             flex-direction: column;
+        }
+        @include responsive(767px)
+        {
+            padding: 43px 20px 70px;
         }
         &__leftBlock {
             width: 50%;
@@ -590,6 +747,11 @@ body {
                     transform: translateY(0);
                     transition: all 0.5s ease 0.2s;
                     cursor: pointer;
+                    @include responsive(767px)
+                    {
+                        width: 64px;
+                        height: 64px;
+                    }
                     .playIcon {
                         width: 18px;
                         height: 24px;
@@ -628,6 +790,10 @@ body {
                     width: max-content;
                     margin: 30px auto 20px;
                 }
+                @include responsive(767px)
+                {
+                    font-size: 26px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -640,6 +806,12 @@ body {
                     @include responsive(1024px)
                     {
                         top: -60%;
+                    }
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                        left: -13%;
                     }
                 }
             }
@@ -657,6 +829,11 @@ body {
                 {
                     text-align: center;
                 }
+                @include responsive(767px)
+                {
+                    font-size: 14px;
+                    margin-bottom: 30px;
+                }
             }
         }
     }
@@ -671,12 +848,21 @@ body {
             padding: 0px 40px 70px;
             flex-wrap: wrap;
         }
+        @include responsive(767px)
+        {
+            padding: 0px 20px 20px;
+        }
         &__block {
             display: flex;
             @include responsive(1024px)
             {
                 width: 50%;
                 margin-bottom: 40px;
+            }
+            @include responsive(767px)
+            {
+                width: 100%;
+                margin-bottom: 20px;
             }
             .iconBlock {
                 width: 60px;
@@ -697,6 +883,10 @@ body {
                     line-height: 1.82;
                     letter-spacing: normal;
                     color: $dark;
+                    @include responsive(767px)
+                    {
+                        font-size: 18px;
+                    }
                 }
                 .infoPara {
                     font-family: $mainFont;
@@ -726,7 +916,16 @@ body {
         padding-top: 93px;
         padding-bottom: 71px;
     }
+    @include responsive(767px)
+    {
+        padding-top: 43px;
+        padding-bottom: 63px;
+    }
     .decoHolder {
+        @include responsive(767px)
+        {
+            display: none;
+        }
         .deco1 {
             width: 29px;
             height: 30px;
@@ -768,6 +967,11 @@ body {
         {
             flex-direction: column;
             padding: 0px 11.305555%;
+        }
+        @include responsive(1024px)
+        {
+            flex-direction: column;
+            padding: 0px 20px;
         }
         .imgOrder {
             @include responsive(1024px)
@@ -823,6 +1027,13 @@ body {
                     width: max-content;
                     margin: 30px auto 20px;
                 }
+                @include responsive(767px)
+                {
+                    margin-top: 0;
+                    font-size: 26px;
+                    width: 68%;
+                    margin: 0 auto 20px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -832,6 +1043,11 @@ body {
                     left: -9%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                    }
                 }
             }
             .para {
@@ -847,6 +1063,11 @@ body {
                 @include responsive(1024px)
                 {
                     text-align: center;
+                }
+                @include responsive(767px)
+                {
+                    font-size: 14px;
+                    margin: 0 15px;
                 }
             }
             .textHolder {
@@ -874,6 +1095,10 @@ body {
         padding-top: 94px;
         padding-bottom: 0px;
     }
+    @include responsive(767px)
+    {
+        padding-top: 43px;
+    }
     &__modelHolder {
         width: 100%;
         display: flex;
@@ -883,6 +1108,10 @@ body {
         @include responsive(1024px)
         {
             padding: 0 9.305555% 40px;
+        }
+        @include responsive(767px)
+        {
+            padding: 0 20px 40px;
         }
         &__block {
             width: 100%;
@@ -916,6 +1145,10 @@ body {
                     margin-top: 30px;
                     position: relative;
                     z-index: 1;
+                    @include responsive(767px)
+                    {
+                        font-size: 26px;
+                    }
                     &::before {
                         content: '';
                         width: 82px;
@@ -925,6 +1158,11 @@ body {
                         left: -9%;
                         top: -50%;
                         z-index: -1;
+                        @include responsive(767px)
+                        {
+                            width: 50px;
+                            height: 51px;
+                        }
                     }
                 }
                 .para {
@@ -938,6 +1176,10 @@ body {
                     color: $gray;
                     text-align: center;
                     margin-bottom: 30px;
+                    @include responsive(767px)
+                    {
+                        font-size: 14px;
+                    }
                 }
             }
             .infoBlock {
@@ -977,6 +1219,11 @@ body {
                     letter-spacing: normal;
                     text-align: center;
                     color: $gray;
+                    @include responsive(767px)
+                    {
+                        margin-bottom: 20px;
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -990,6 +1237,10 @@ body {
             padding: 90px 9.305555% 50px;
             flex-direction: column;
         }
+        @include responsive(767px)
+        {
+            padding: 50px 20px 20px;
+        }
         &__leftBlock {
             width: 44%;
             padding-right: 14.513%;
@@ -999,6 +1250,10 @@ body {
                 padding-right: 0%;
                 margin-bottom: 70px;
                 padding: 0 3%;
+            }
+            @include responsive(767px)
+            {
+                margin-bottom: 40px;
             }
             .title {
                 font-family: $decoFont;
@@ -1018,6 +1273,11 @@ body {
                     margin-top: 0px;
                     width: max-content;
                 }
+                @include responsive(767px)
+                {
+                    font-size: 26px;
+                    width: 75%;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1027,6 +1287,11 @@ body {
                     left: -9%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                    }
                 }
             }
             .para {
@@ -1039,6 +1304,10 @@ body {
                 letter-spacing: normal;
                 color: $gray;
                 margin-bottom: 30px;
+                @include responsive(767px)
+                {
+                    font-size: 14px;
+                }
             }
         }
         &__rightBlock {
@@ -1061,6 +1330,11 @@ body {
                     {
                         padding-right: 0;
                     }
+                    @include responsive(767px)
+                    {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
                     .iconHolder {
                         &__block {
                             width: 60px;
@@ -1070,6 +1344,11 @@ body {
                             align-items: center;
                             justify-content: center;
                             margin-right: 20px;
+                            @include responsive(767px)
+                            {
+                                width: 54px;
+                                height: 54px;
+                            }
                         }
                     }
                     .textBlock {
@@ -1084,6 +1363,10 @@ body {
                             line-height: normal;
                             letter-spacing: normal;
                             color: $dark;
+                            @include responsive(767px)
+                            {
+                                font-size: 16px;
+                            }
                         }
                     }
                 }
@@ -1100,6 +1383,10 @@ body {
         {
             padding: 92px 5.305555% 0;
         }
+        @include responsive(767px)
+        {
+            padding: 50px 20px 0;
+        }
         .decoBg {
             position: absolute;
             left: 0;
@@ -1107,6 +1394,10 @@ body {
             top: 0;
             height: 45%;
             background-color: $titanWhite;
+            @include responsive(767px)
+            {
+                height: 35%;
+            }
         }
         .titleBlock {
             width: auto;
@@ -1114,6 +1405,10 @@ body {
             justify-content: center;
             margin: auto;
             padding-bottom: 70px;
+            @include responsive(767px)
+            {
+                padding-bottom: 40px;
+            }
             .title {
                 font-family: $decoFont;
                 font-size: 42px;
@@ -1131,6 +1426,10 @@ body {
                 {
                     margin-top: 0px;
                 }
+                @include responsive(767px)
+                {
+                    font-size: 26px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1140,6 +1439,11 @@ body {
                     left: -9%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                    }
                 }
             }
         }
@@ -1183,6 +1487,10 @@ body {
                     border-radius: 2px;
                     background-color: #ffffff;
                     box-shadow: 0 1px 3px 0 rgba(159, 163, 198, 0.3);
+                    @include responsive(767px)
+                    {
+                        padding: 25px 20px 10px;
+                    }
                     .title {
                         font-family: $mainFont;
                         font-size: 22px;
@@ -1193,6 +1501,10 @@ body {
                         letter-spacing: normal;
                         color: $dark;
                         margin-bottom: 24px;
+                        @include responsive(767px)
+                        {
+                            font-size: 18px;
+                        }
                         
                     }
                     .propertyHolder {
@@ -1205,6 +1517,10 @@ body {
                             justify-content: space-between;
                             width: 100%;
                             margin-bottom: 10px;
+                            @include responsive(767px)
+                            {
+                                margin-bottom: 4px;
+                            }
                             .name {
                                 font-family: $mainFont;
                                 font-size: 16px;
@@ -1214,6 +1530,10 @@ body {
                                 line-height: 1.63;
                                 letter-spacing: normal;
                                 color: $gray;
+                                @include responsive(767px)
+                                {
+                                    font-size: 10px;
+                                }
                             }
                             .percentages {
                                 font-family: $mainFont;
@@ -1224,6 +1544,10 @@ body {
                                 line-height: 1.63;
                                 letter-spacing: normal;
                                 text-align: right;
+                                @include responsive(767px)
+                                {
+                                    font-size: 10px;
+                                }
                             }
                         }
                         &__percentagesBlock {
@@ -1231,6 +1555,10 @@ body {
                             height: 15px;
                             background-color: #f3f3f8;
                             position: relative;
+                            @include responsive(767px)
+                            {
+                                height: 10px;
+                            }
                             .percentagesLine {
                                 position: absolute;
                                 left: 0;
@@ -1257,6 +1585,10 @@ body {
                     align-items: center;
                     margin-bottom: 70px;
                 }
+                @include responsive(767px)
+                {
+                    
+                }
                 &:nth-child(odd){
                     padding-right: 70px;
                     @include responsive(1024px)
@@ -1278,11 +1610,19 @@ body {
                     {
                         align-items: center;
                     }
+                    @include responsive(767px)
+                    {
+                        flex-direction: column;
+                    }
                     .imgBlock {
                         width: 40%;
                         @include responsive(1024px)
                         {
                             width: 30%;
+                        }
+                        @include responsive(767px)
+                        {
+                            width: 65%
                         }
                         img {
                             width: 100%;
@@ -1295,6 +1635,12 @@ body {
                         {
                             width: 70%;
                         }
+                        @include responsive(767px)
+                        {
+                            width: 100%;
+                            padding-left: 0;
+                            margin-top: 30px;
+                        }
                         .title {
                             font-family: $mainFont;
                             font-size: 20px;
@@ -1305,6 +1651,11 @@ body {
                             letter-spacing: normal;
                             color: $dark;
                             margin-bottom: 7px;
+                            @include responsive(767px)
+                            {
+                                font-size: 18px;
+                                text-align: center;
+                            }
                         }
                         .para {
                             font-family: $mainFont;
@@ -1316,6 +1667,11 @@ body {
                             letter-spacing: normal;
                             color: $gray;
                             margin-bottom: 15px;
+                            @include responsive(767px)
+                            {
+                                font-size: 14px;
+                                text-align: center;
+                            }
                         }
                         .downloadLink {
                             display: flex;
@@ -1327,6 +1683,10 @@ body {
                             font-stretch: normal;
                             line-height: 1.88;
                             letter-spacing: normal;
+                            @include responsive(767px)
+                            {
+                                justify-content: center;
+                            }
                             color: $cerise;
                             span {
                                 margin-right: 10px;
@@ -1351,6 +1711,11 @@ body {
         padding-top: 70px;
         padding-bottom: 50px;
     }
+    @include responsive(767px)
+    {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
     &__meetHolder {
         width: 100%;
         padding: 0 9.305555% 120px;
@@ -1361,6 +1726,10 @@ body {
         {
             flex-direction: column;
             padding: 0 6.305555% 70px;
+        }
+        @include responsive(767px)
+        {
+            padding: 0 20px 20px;
         }
         &__block {
             width: 50%;
@@ -1373,6 +1742,10 @@ body {
                 @include responsive(1024px)
                 {
                     margin: 0 auto 40px;
+                }
+                @include responsive(767px)
+                {
+                    width: 95%; 
                 }
                 img {
                     width: 100%;
@@ -1398,6 +1771,10 @@ body {
                         width: max-content;
                         margin: 30px 5% 20px;
                     }
+                    @include responsive(767px)
+                    {
+                        font-size: 26px;
+                    }
                     &::before {
                         content: '';
                         width: 82px;
@@ -1407,6 +1784,11 @@ body {
                         left: -9%;
                         top: -50%;
                         z-index: -1;
+                        @include responsive(767px)
+                        {
+                            width: 50px;
+                            height: 51px;
+                        }
                     }
                 }
                 .para {
@@ -1423,6 +1805,10 @@ body {
                     {
                         margin: 0 5%;
                     }
+                    @include responsive(767px)
+                    {
+                        font-size: 14px;
+                    }
                 }
                 .communityHolder {
                     width: 100%;
@@ -1436,6 +1822,11 @@ body {
                         width: 50%;
                         display: flex;
                         margin-bottom: 27px;
+                        @include responsive(767px)
+                        {
+                            width: 100%;
+                            margin-bottom: 20px;
+                        }
                         .iconBlock {
                             width: 60px;
                             height: 60px;
@@ -1443,6 +1834,11 @@ body {
                             display: flex;
                             align-items: center;
                             justify-content: center;
+                            @include responsive(767px)
+                            {
+                                width: 54px;
+                                height: 54px;
+                            }
                         }
                         .textBlock {
                             margin-left: 15px;
@@ -1455,6 +1851,10 @@ body {
                                 line-height: 1.82;
                                 letter-spacing: normal;
                                 color: $dark;
+                                @include responsive(767px)
+                                {
+                                    font-size: 18px;
+                                }
                             }
                             .infoPara {
                                 font-family: $mainFont;
@@ -1465,6 +1865,10 @@ body {
                                 line-height: 1;
                                 letter-spacing: normal;
                                 color: $gray;
+                                @include responsive(767px)
+                                {
+                                    font-size: 14px;
+                                }
                             }
                         }
                     }
@@ -1480,6 +1884,10 @@ body {
         @include responsive(1024px)
         {
             padding: 90px 0 0px;
+        }
+        @include responsive(767px)
+        {
+            padding: 40px 0 0px;
         }
         .decoHolder {
             @include responsive(1024px)
@@ -1532,6 +1940,10 @@ body {
             justify-content: center;
             margin: auto;
             margin-bottom: 70px;
+            @include responsive(767px)
+            {
+                margin-bottom: 40px;
+            }
             .title {
                 font-family: $decoFont;
                 font-size: 40px;
@@ -1549,6 +1961,10 @@ body {
                 {
                     margin-top: 0px;
                 }
+                @include responsive(767px)
+                {
+                    font-size: 26px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1558,6 +1974,11 @@ body {
                     left: -9%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                    }
                 }
             }
         }
@@ -1567,6 +1988,10 @@ body {
             @include responsive(1024px)
             {
                 padding: 0 2.7083% 70px;
+            }
+            @include responsive(767px)
+            {
+                padding: 0 20px 30px;
             }
             .roadMapImg {
                 margin: 0 43px;
@@ -1587,6 +2012,10 @@ body {
             {
                 padding: 0 8.7083% 70px;
             }
+            @include responsive(767px)
+            {
+                padding: 0 20px 40px;
+            }
             &__carouselWrapper {
                 width: 100%;
                 display: flex;
@@ -1595,11 +2024,36 @@ body {
                 }
                 .owl-dots {
                     display: none;
+                    @include responsive(767px)
+                    {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: -30px;
+                    }
+                    .owl-dot {
+                        span {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #eff1fd;
+                        }
+                        &:hover {
+                            span {
+                                background: $royalBlue;
+                            }
+                        }
+                    }
+                    .owl-dot.active {
+                        span {
+                            background: $cerise;
+                        }
+                    }
                 }
                 &--item {
-                    @include responsive(1024px)
+                    @include responsive(767px)
                     {
-                        
+                        padding-bottom: 30px;
                     }
                     .dateBlock {
                         display: flex;
@@ -1611,6 +2065,12 @@ body {
                         height: 47px;
                         margin-bottom: 22px;
                         transition: all 0.5s ease;
+                        @include responsive(767px)
+                        {
+                            width: 89px;
+                            height: 42px;
+                            margin: 0 auto 22px;
+                        }
                         .date {
                             font-family: $mainFont;
                             font-size: 16px;
@@ -1621,6 +2081,10 @@ body {
                             letter-spacing: normal;
                             color: $royalBlue;
                             transition: all 0.5s ease;
+                            @include responsive(767px)
+                            {
+                                font-size: 14px;
+                            }
                         }
                     }
                     .decoLine {
@@ -1640,6 +2104,11 @@ body {
                             margin: auto;
                             left: 51px;
                             transition: background-color 0.5s ease;
+                            @include responsive(767px)
+                            {
+                                left: 0;
+                                right: 0;
+                            }
                             &__innerCircle {
                                 width: 10px;
                                 height: 10px;
@@ -1661,6 +2130,12 @@ body {
                         {
                             padding-right: 15%;
                         }
+                        @include responsive(767px)
+                        {
+                            padding-right: 0;
+                            margin-left: 15px;
+                            margin-right: 15px;
+                        }
                         .title {
                             font-family: $mainFont;
                             font-size: 20px;
@@ -1672,6 +2147,11 @@ body {
                             color: $dark;
                             margin-bottom: 8px;
                             transition: color 0.5s ease;
+                            @include responsive(767px)
+                            {
+                                font-size: 18px;
+                                text-align: center;
+                            }
                         }
                         .para {
                             font-family: $mainFont;
@@ -1682,6 +2162,11 @@ body {
                             line-height: 1.43;
                             letter-spacing: normal;
                             color: $gray;
+                            @include responsive(767px)
+                            {
+                                font-size: 14px;
+                                text-align: center;
+                            }
                         }
                     }
                 }
@@ -1723,6 +2208,14 @@ body {
                     {
                         right: 4.2%;
                     }
+                    @include responsive(767px)
+                    {
+                        right: 20px;
+                        top: unset;
+                        bottom: 0;
+                        width: 40px;
+                        height: 40px;
+                    }
                     &:hover {
                         border: solid 1px $cerise;
                         .nextRoadmap--icon {
@@ -1760,6 +2253,14 @@ body {
                     {
                         left: 4.2%;
                     }
+                    @include responsive(767px)
+                    {
+                        left: 20px;
+                        top: unset;;
+                        bottom: 0;
+                        width: 40px;
+                        height: 40px;
+                    }
                     &:hover {
                         border: solid 1px $cerise;
                         .prevRoadmap--icon {
@@ -1796,6 +2297,10 @@ body {
     {
         padding-top: 94px;
     }
+    @include responsive(767px)
+    {
+        padding-top: 50px;
+    }
     &__teamHolder {
         width: 100%;
         padding: 0 9.305555% 50px;
@@ -1803,6 +2308,10 @@ body {
         @include responsive(1024px)
         {
             padding: 0 6.305555% 20px;
+        }
+        @include responsive(767px)
+        {
+            padding: 0 20px 20px;
         }
         &__titleBlock {
             width: 63%;
@@ -1816,6 +2325,11 @@ body {
             {
                 width: 100%;
                 margin-bottom: 70px;
+            }
+            @include responsive(767px)
+            {
+                width: 95%;
+                margin-bottom: 40px;
             }
             .title {
                 font-family: $decoFont;
@@ -1835,6 +2349,10 @@ body {
                 {
                     margin-top: 0px;
                 }
+                @include responsive(767px)
+                {
+                    font-size: 26px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1844,6 +2362,11 @@ body {
                     left: -9%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                    }
                 }
             }
             .para {
@@ -1856,6 +2379,10 @@ body {
                 letter-spacing: normal;
                 text-align: center;
                 color: $gray;
+                @include responsive(767px)
+                {
+                    font-size: 14px;
+                }
             }
         }
         &__teamMemberHolder {
@@ -1883,6 +2410,20 @@ body {
                         padding-left: 20px;
                     }
                 }
+                @include responsive(767px)
+                {
+                    width: 100%;
+                    padding-right: 0;
+                    margin-bottom: 40px;
+                    &:nth-child(odd)
+                    {
+                        padding-right: 0px;
+                    }
+                    &:nth-child(even)
+                    {
+                        padding-left: 0px;
+                    }
+                }
                 .imgHolder {
                     width: 100%;
                     background-color: $titanWhite;
@@ -1890,6 +2431,10 @@ body {
                     justify-content: center;
                     padding: 36px 34px 0;
                     margin-bottom: 20px;
+                    @include responsive(767px)
+                    {
+                        margin-bottom: 15px;
+                    }
                     img {
                         
                     }
@@ -1910,6 +2455,10 @@ body {
                         letter-spacing: normal;
                         text-align: center;
                         color: $dark;
+                        @include responsive(767px)
+                        {
+                            font-size: 18px;
+                        }
                     } 
                     .position {
                         font-family: $mainFont;
@@ -1922,6 +2471,10 @@ body {
                         text-align: center;
                         color: $cerise;
                         margin-bottom: 15px;
+                        @include responsive(767px)
+                        {
+                            font-size: 10px;
+                        }
                     }
                     .para {
                         font-family: $mainFont;
@@ -1934,6 +2487,10 @@ body {
                         text-align: center;
                         color: $gray;
                         margin-bottom: 15px;
+                        @include responsive(767px)
+                        {
+                            font-size: 14px;
+                        }
                     }
                     .linkHolder {
                         display: flex;
@@ -1969,6 +2526,11 @@ body {
                 margin-top: 20px;
                 margin-bottom: 64px;
             }
+            @include responsive(767px)
+            {
+                margin-top: 0;
+                margin-bottom: 40px;
+            }
             .title {
                 font-family: $decoFont;
                 font-size: 40px;
@@ -1983,6 +2545,10 @@ body {
                 position: relative;
                 z-index: 1;
                 margin-bottom: 20px;
+                @include responsive(767px)
+                {
+                    font-size: 26px;
+                }
                 &::before {
                     content: '';
                     width: 82px;
@@ -1992,6 +2558,11 @@ body {
                     left: -9%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                    }
                 }
             }
         }
@@ -2020,6 +2591,20 @@ body {
                         padding-left: 20px;
                     }
                 }
+                @include responsive(767px)
+                {
+                    width: 100%;
+                    padding-right: 0;
+                    margin-bottom: 40px;
+                    &:nth-child(odd)
+                    {
+                        padding-right: 0px;
+                    }
+                    &:nth-child(even)
+                    {
+                        padding-left: 0px;
+                    }
+                }
                 .imgHolder {
                     width: 100%;
                     background-color: $amour;
@@ -2027,6 +2612,10 @@ body {
                     justify-content: center;
                     padding: 36px 34px 0;
                     margin-bottom: 20px;
+                    @include responsive(767px)
+                    {
+                        margin-bottom: 15px;
+                    }
                     img {
                         
                     }
@@ -2047,6 +2636,10 @@ body {
                         letter-spacing: normal;
                         text-align: center;
                         color: $dark;
+                        @include responsive(767px)
+                        {
+                            font-size: 18px;
+                        }
                     } 
                     .position {
                         font-family: $mainFont;
@@ -2059,6 +2652,10 @@ body {
                         text-align: center;
                         color: $royalBlue;
                         margin-bottom: 15px;
+                        @include responsive(767px)
+                        {
+                            font-size: 10px;
+                        }
                     }
                     .para {
                         font-family: $mainFont;
@@ -2071,6 +2668,10 @@ body {
                         text-align: center;
                         color: $gray;
                         margin-bottom: 15px;
+                        @include responsive(767px)
+                        {
+                            font-size: 14px;
+                        }
                     }
                     .linkHolder {
                         display: flex;
@@ -2102,6 +2703,10 @@ body {
         {
             padding: 70px 6.305555%;
         }
+        @include responsive(767px)
+        {
+            padding: 50px 20px;
+        }
         .decoHolder {
             .deco1 {
                 width: 24px;
@@ -2127,6 +2732,12 @@ body {
                     top: 27%;
                     left: 15%;
                 }
+                @include responsive(767px)
+                {
+                    width: 50px;
+                    height: 58px;
+                    top: 18%;
+                }
             }
             .deco3 {
                 width: 24px;
@@ -2139,6 +2750,14 @@ body {
                 {
                     top: 55%;
                     right: 0%;
+                }
+                @include responsive(767px)
+                {
+                    width: 36px;
+                    height: 43px;
+                    background-color: #f3f4ff;
+                    top: 47%;
+                    right: 15%;
                 }
             }
             .deco4 {
@@ -2181,9 +2800,11 @@ body {
                 margin-top: 30px;
                 position: relative;
                 z-index: 1;
-                @include responsive(1024px)
+                @include responsive(767px)
                 {
-
+                    font-size: 26px;
+                    width: max-content;
+                    margin: auto;
                 }
                 &::before {
                     content: '';
@@ -2194,6 +2815,11 @@ body {
                     left: -3%;
                     top: -50%;
                     z-index: -1;
+                    @include responsive(767px)
+                    {
+                        width: 50px;
+                        height: 51px;
+                    }
                 }
             }
             &__customNav {
@@ -2202,6 +2828,14 @@ body {
                 top: 0;
                 display: flex;
                 z-index: 10;
+                @include responsive(767px)
+                {
+                    top: unset;
+                    bottom: 0;
+                    left: 0;
+                    display: flex;
+                    justify-content: space-between;
+                }
                 .nextNews {
                     width: 125px;
                     height: 50px;
@@ -2214,6 +2848,11 @@ body {
                     {
                         width: 51px;
                         height: 50px;
+                    }
+                    @include responsive(767px)
+                    {
+                        width: 40px;
+                        height: 40px;
                     }
                     &--icon {
                         background-image: url('../images/stre-right-cerise.svg');
@@ -2252,6 +2891,11 @@ body {
                         width: 51px;
                         height: 50px;
                     }
+                    @include responsive(767px)
+                    {
+                        width: 40px;
+                        height: 40px;
+                    }
                     &--icon {
                         background-image: url('../images/stre-left.svg');
                         background-position: center;
@@ -2284,11 +2928,41 @@ body {
                 {
                     margin-top: 70px;
                 }
+                @include responsive(767px)
+                {
+                    margin-top: 40px;
+                    padding-bottom: 70px;
+                }
                 .owl-nav {
                     display: none;
                 }
                 .owl-dots {
                     display: none;
+                    @include responsive(767px)
+                    {
+                        display: block;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 5px;
+                    }
+                    .owl-dot {
+                        span {
+                            width: 8px;
+                            height: 8px;
+                            background-color: #eff1fd;
+                        }
+                        &:hover {
+                            span {
+                                background: $royalBlue;
+                            }
+                        }
+                    }
+                    .owl-dot.active {
+                        span {
+                            background: $cerise;
+                        }
+                    }
                 }
                 &--item {
                     .imgHolder {
@@ -2311,6 +2985,11 @@ body {
                             letter-spacing: normal;
                             color: $dark;
                             margin-bottom: 10px;
+                            @include responsive(767px)
+                            {
+                                font-size: 18px;
+                                text-align: center;
+                            }
                         }
                         .para {
                             font-family: $mainFont;
@@ -2321,6 +3000,11 @@ body {
                             line-height: 1.63;
                             letter-spacing: normal;
                             color: $gray;
+                            @include responsive(767px)
+                            {
+                                font-size: 14px;
+                                text-align: center;
+                            }
                         }
                     }
                 }
@@ -2340,6 +3024,11 @@ body {
     {
         padding-top: 92px;
         padding-bottom: 70px;
+    }    
+    @include responsive(767px)
+    {
+        padding-top: 50px;
+        padding-bottom: 20px;
     }
     .decoHolder {
         @include responsive(1024px)
@@ -2374,6 +3063,11 @@ body {
     &__titleHolder {
         display: flex;
         justify-content: center;
+        @include responsive(767px)
+        {
+            width: 75%;
+            margin: auto;
+        }
         .title {
             font-family: $decoFont;
             font-size: 40px;
@@ -2387,6 +3081,13 @@ body {
             margin-top: 30px;
             position: relative;
             z-index: 1;
+            @include responsive(767px)
+            {
+                font-size: 26px;
+                width: max-content;
+                margin: auto;
+                text-align: center;
+            }
             &::before {
                 content: '';
                 width: 82px;
@@ -2396,6 +3097,11 @@ body {
                 left: -9%;
                 top: -50%;
                 z-index: -1;
+                @include responsive(767px)
+                {
+                    width: 50px;
+                    height: 51px;
+                }
             }
         }
     }
@@ -2408,6 +3114,10 @@ body {
         {
             flex-direction: column;
             padding: 70px 5.305555% 0;
+        }
+        @include responsive(767px)
+        {
+            padding: 40px 20px 0;
         }
         &__block {
             width: 50%;
@@ -2443,6 +3153,10 @@ body {
                     align-items: center;
                     padding: 12px 30px 10px;
                     cursor: pointer;
+                    @include responsive(767px)
+                    {
+                        padding: 22px 20px 21px;
+                    }
                     .title {
                         font-family: $mainFont;
                         font-size: 18px;
@@ -2453,6 +3167,12 @@ body {
                         letter-spacing: normal;
                         color: $dark;
                         transition: all 0.3s ease;
+                        @include responsive(767px)
+                        {
+                            font-size: 14px;
+                            line-height: 1.43;
+                            width: 90%;
+                        }
                     }
                     .icon {
                         background-image: url('../images/plus.svg');
@@ -2474,6 +3194,10 @@ body {
                 .answerBlock {
                     display: none;
                     padding: 5px 30px 27px;
+                    @include responsive(767px)
+                    {
+                        padding: 5px 20px 21px;
+                    }
                     .para {
                         font-family: $mainFont;
                         font-size: 16px;
@@ -2483,6 +3207,10 @@ body {
                         line-height: 1.63;
                         letter-spacing: normal;
                         color: $gray;
+                        @include responsive(767px)
+                        {
+                            font-size: 14px;
+                        }
                     }
                 }
             }
@@ -2679,7 +3407,8 @@ body {
                     @include responsive(767px)
                     {
                         width: 100%;
-                        margin-bottom: 22px;
+                        margin-bottom: 4%;
+                        justify-content: space-between;
                     }
                     &--link {
                         width: 20%;
@@ -2718,8 +3447,9 @@ body {
                         }
                         @include responsive(767px)
                         {
-                            width: 20%;
-                            margin-right: 6.333%;
+                            width: 56px;
+                            height: 56px;
+                            margin-right: 0;
                             &:last-child {
                                 margin-right: 0%;
                             }
